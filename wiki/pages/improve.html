@@ -1,0 +1,200 @@
+{% extends "layout.html" %}
+  
+{% block title %}Improvement of an Existing Part{% endblock %}
+{% block lead %}Describe the improvements your team made of an existing part.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Improved Part</h1>
+            <p class="lead medium-importance">Micro FitD for E.coli -  BBa_K4323002 & BBa_K4323003</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Why FitD box -->
+      <!-- Consider adding a link to the Zequanox paper -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Why FitD ?</h5>
+          <hr>
+          <p class="offset-1 col-9 lead technical-text text-left">When it comes to biological molluscicides FitD (fluorescens insecticidal protein D) is always at the top of the list. The protein occurs naturally in the bacterium <em>Pseudomonas fluorescens</em> and is known to be very toxic and selective to Zebra and Quagga mussels.<sup>1</sup> Commercial treatments simply utilize the heat-treated whole <em>P. fluorescens</em>. Having Fitd as a reliable BioBrick compatible with the popular chassis <em>E.coli</em> would be great for synthetic biologists to have.</p> 
+        </div>
+      </div>
+
+      <!-- Room for Improvement-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Room for Improvement</h5>
+          <hr>
+          <p class="offset-1 col-9 lead technical-text text-left">Since the FitD protein is so critical to invasive mussels biocontrol strategies it should come as no surprise that it caught the attention of the past iGEM team such as <a href="https://2017.igem.org/Team:Minnesota" target="blank">(Minnesota Biodesign, 2017)</a>, <a href="https://2018.igem.org/Team:Lethbridge" target="blank">(Lethbride, 2018)</a> and <a href="https://2022.igem.wiki/unilausanne/" target="blank"> (UNILausanne, 2022).</a> It was the Lethbridge team in  2018, that deposited <a style="color:blueviolet" href="http://parts.igem.org/Part:BBa_K2683006" target="_blank">BBa_K2683006</a>. Note that this FitD protein, and our modified version are not based of off <em>Pseudomonas fluorescens</em> but rather the closely related <em>Pseudomonas Protogens</em>.</p>
+
+          <p class="offset-1 col-9 lead technical-text text-left">Despite many teams working towards active FitD expression in E.coli non had yet managed to produce an active version. We spoke with Kristi Turton, the designer of a <a style="color:blueviolet" href="http://parts.igem.org/Part:BBa_K2683006" target="_blank">BBa_K2683006</a> to get a better understanding of the challenges associated with this protein. The problem, FitD is big! It is 9009 bp to produce over  320,000 kDa protein. The large size makes it expensive to synthesize, difficult to clone, prone to mutation and even requires special considerations when performing SDS-PAGE analysis. As a result, no iGEM team had yet demonstrated protein expression or toxicity. We set out three goals for our improved FitD.</p>
+        
+          <p class="mt-5 offset-1 col-9 lead technical-text">1. Make the coding sequence as short as possible</p>
+          <p class="offset-1 col-9 lead technical-text">2. Prove protein expression <p>
+          <p class=" pb-1 offset-1 col-9 lead technical-text">3. Demonstrate bioactivity</p>
+          
+        
+  
+        </div>
+      </div>
+
+      <!-- Design of FitD -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Design</h5>
+          <hr>
+          <p class="offset-1 col-9 lead technical-text">Our original protein is over 9009 bp, we gave ourselves the design constraint of keeping it under 3000 bp. This number was chosen semi-rationally. We wanted to make the protein at least half the size so that it would be a substantial improvement. This brought us to something ~4,500 bp. Then we looked at some synthesis options and found that sequences above 3,000 were considered problematic and came with longer wait times and higher costs. From this, we set the goal of removing 2/3 of the sequence while retaining activity.</p>
+
+          <p class="offset-1 col-9 lead technical-text">The most important question now was, what are we going to keep? A good first step when investigating any protein is to search for it on Uniprot, in our case, the the Uniprot ID is <a href="https://www.uniprot.org/uniprotkb/B2L231/entry" target="_blank" style="color:blueviolet">B2L231_9PSED</a>. From this you can already find one interesting feature, a TcdA_TcdB_pore domain, from amino acid position (1620-2278). Doing some further reading we came across an article detailing a reduction in the toxicity resulting from the FitA-FitH gene cluster when the central region of FitD was deleted<sup>2</sup>. This let us narrow the search to the window by about half.</p>
+
+          <p class="offset-1 col-9 lead technical-text">To get a better idea of which domains we wanted to keep we moved on to homology models. Using <a href="https://swissmodel.expasy.org/interactive" target="_blank" style="color:blueviolet">SWISS-MODEL</a>. We made a homology model of the P. protogens FitD against two other related toxins. The first, an electron microscopy structure of toxin A from Clostridioides difficle PDB ID: <a href="https://www.rcsb.org/structure/7POG" target="_blank" style="color:blueviolet">7POG</a> as a template for the core (amino acids 1440-2187). The second, for amino acids (1301-1568), putative RTX-toxin also called (MCF for “make caterpillar floppy”) PDB ID: <a href="https://www.rcsb.org/structure/6II6" target="_blank" style="color:blueviolet">6II6</a>.<sup>3,4,5</sup> </p>
+
+          <!-- Homology structure of the protein-->
+          <div class="row mt-5 pt-3">
+          <div class="col">
+            <img  class="offset-2 col-8 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/fitd/fitd.png">
+            <p class="offset-2 col-8 mt-1 mb-5">Figure 1. SWISS-MODEL of fitD1436-2187 from Pseudomonas
+              protegens using toxinA (PDB ID: 7POG) as template. </p>
+          </div> 
+        </div>
+
+          <p class="offset-1 col-9 lead technical-text">The structure above is a homology model and is already somewhat representative of the truncated product since regions with no homology to toxin A are not shown. From the homology modelling, we found that the FitD protein could be rationalized as a large toxin with several active sub-domains. There is the MCF region, the toxin A region, and then the core tcdA_tcdB_pore. Ultimately we opted to keep the entire MCF region, as well as the toxin A region. We did end up removing 88 amino acids from the tcdA_tcdB_pore.</p>
+
+          <!-- FitD map explaining desing-->
+          <div class="row mt-5 pt-3">
+          <div class="col">
+            <img  class="offset-1 col-10 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/fitd/fitd-map.png">
+            <p class="offset-1 col-10 mt-1 mb-5">Figure 2. The black band represents the entire sequence of wild-type FitD from <em>Psedomonas Protogens</em>. The MCF toxin homology region is shown in cyan, the toxin A homology region in green and the TcdA_TcdB_pore homology region is shown in magenta. The red annotation named partial fitD is the final compromise for our truncated product. Complete homology map included in the Supplemental Information.</p>
+          </div> 
+          </div>
+
+          <p class="offset-1 col-9 lead technical-text">Having decided on a promising sequence we ran the <a href="https://www.gromacs.org/" target="_blank" style="color:blueviolet">GROMACS</a> simulation in a manner similar to Aerolysin. The difference is that the start sequence was in this case a <a href="https://swissmodel.expasy.org/interactive" target="_blank" style="color:blueviolet">SWISS-MODEL</a>. Our main interest in <a href="https://swissmodel.expasy.org/interactive" target="_blank" style="color:blueviolet">SWISS-MODEL</a> was homology alignment. We are aware that many structural biologists may express reservations over performing molecular dynamics from them. As it turns out the molecular dynamic’s simulation did not give a prediction indicative of a stable protein.</p>
+
+          <!-- Here is where you put the movie-->
+          <div class="row mt-5 pt-3">
+          <div class="col">
+            <img  class="offset-1 col-10 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/fitd/fitd-optimized.gif">
+            <p class="offset-1 col-10 mt-1 mb-5">Figure 3. GROMACS simmulation of Fitd over 50 nanoseconds. The entire simulation cannont be shown so this is a condensed version.</p>
+          </div> 
+        </div>
+
+        <!-- This is where I break the News That the simmulations did not go so hot-->
+        <div class="row mt-5 pt-3">
+          <div class="col">
+            <img  class="offset-1 col-8 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/fitd/fitd-simmulation-final.png">
+            <p class="offset-1 col-10 mt-1 mb-5">Figure 4. Summary of the main conclusions from the molecular dynamics simulation. </p>
+          </div> 
+        </div>
+
+        <p class="offset-1 col-9 lead technical-text">As a “tie-breaker” we input of construct into <a href="http://bioinf.cs.ucl.ac.uk/psipred/" target="_blank" style="color:blueviolet">PSIPRED</a> to see how many predicted transmembrane domains we had. The results from , found as part of the supplemental information, confirmed that our design had predicted transmembrane activity. Worbench output is also found in the Supplemental Information.</p>
+
+        <p class="offset-1 col-9 lead technical-text mb-4">At this point, we had a sequence 1/3 the size of the natural sequence that seemed like it would retain the bio-activity. However, we were unsure if the protein would be stable or expressed in high amounts. We opted to call it for this round of design and move on to the build phase.</p>
+        </div>
+      </div>
+
+      <!--Build-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Build</h5>
+          <hr>
+
+          <p class="offset-1 col-9 lead technical-text">Like Aerolysin, the sequence was synthesized and then cloned using Gibson assembly into the pET28b vector, as outlined in the description. The FitD coding region was 2745 base pairs in length after adding in a C-terminal His tag to have a simple purification option. After the addition of a T7 promoter, RBS, double terminator, the iGEM prefix and suffix the total tally was 2979 bp.</p>
+        </div>
+      </div>
+
+      <!-- Test -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Test</h5>
+          <hr>
+
+          <p class="offset-1 col-9 lead technical-text">For proof of expression, the test is to purify the expressed protein by Nickel chromatography. Some SDS Page results are included below.</p>
+
+          <p class="offset-1 col-9 lead technical-text">The Bioassay was conducted by <a href="https://2022.igem.wiki/unilausanne/" target="blank" style="color:blueviolet"> UNILausanne</a>. The bioassay was conducted on quagga mussels (<em>Dreissena bugensis</em>). This is another invasive mussel species very similar to Zebra mussels (<em>Dreissena polymorpha</em>).</p>
+
+          <div class="row mt-5 pt-3">
+          <div class="col">
+            <img  class="offset-1 col-9 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/fitd/fitd-toxicity.png">
+            <p class="offset-1 col-9 mt-1">Figure 5. The FitD in the graph refer specicaly to the truncated version BBa_K4323002. The green line shows that the number of living mussels is quickly reduced to zero when the FItD toxin is present.</p>
+          </div> 
+        </div>
+
+        <div class="row mt-5 pt-3">
+          <div class="col">
+            <img  class="offset-1 col-9 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/fitd/fitd-toxicity-against-wild-type-final.png">
+            <p class="offset-1 col-9 mt-1 mb-5">Figure 6. Here is a really important graph that shows that the toxicity of our FitD expresses by <em>E.coli</em>. This graph makes it very clear that the activity associated with this natural organism was succsessfully moved into the molecular biologist favorite <em>E.coli</em> </p>
+          </div> 
+        </div>
+
+        </div>
+      </div>
+
+      <!--Learn -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Learn</h5>
+          <hr>
+
+          <p class="offset-1 col-9 lead technical-text">
+          While we are generally quite happy with the performance of BBa_K4323002 "micro FitD" there is always room for improvement. As evidenced by the SDS-PAGE results the expression levels are still relatively low. Since the part has the desired function (mussel toxicity) future efforts would focus on finding the best combination of plasmid, promoter, ribosome binding site and terminator for optimal expression. Alternatively, genomic integration could be considered at this point.
+        </p>
+  
+        </div>
+      </div>
+
+      <!--Outlook and Conclusion-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Outlook and Conclusion</h5>
+          <hr>
+
+          <p class="offset-1 col-9 lead technical-text">Invasive mussels <em>Dreissena sp.</em> are a global problem where synthetic biology may be the ideal solution. The natural protein FitD is one of the best bio-controls available. Before now the best part in the iGEM registry has not yet been synthesized or tested. Team <a href="https://2022.igem.wiki/unilausanne/" target="blank" style="color:blueviolet"> UNILausanne</a> was able to show that wild-type FitD while effective, is very difficult to move into E.coli. They then tested the modified FitD designed by team UManitoba and demonstrated that the toxicity had been reproduced in E.coli.</p>
+
+          <p class="offset-1 col-9 lead technical-text">To date, four iGEM teams have attempted various strategies to utilize this protein as a biocontrol. We are pleased to add BBa_K432002 to the iGEM registry and hope that it will prove useful to future synthetic biologists.</p>
+
+          <p class="offset-1 col-9 lead technical-text mb-5">Contrasted with the original iGEM registry FitD sequence BBa_K2683006 the improved part BBa_K432002 is one-third the length, includes a His-tag for simple purification, and is proven to be at least as toxic to Dreissena bugensis as the protein produced by the natural organism.</p>
+
+          <figure class="text-center">
+          <blockquote class=" offset-1 blockquote col-10 ">
+            <p>"Despite the challenges of building a new iGEM team, Prairie iGEM has been able to use synthetic biology to improve how we can treat the zebra mussel problem in Canada.  Having worked with the protein FitD in iGEM 2018, I know the challenges of its production due to its incredible size and amino acid length. Being able to provide a functionally truncated version of this protein, a protein having large potential in helping remove the invasive zebra mussels species from Canadian waters, is a great contribution to environmental conservation and synthetic biology in general. I have been very impressed by their progress this season and am excited to see them present on the world stage in Paris"</p>
+          </blockquote>
+          <figcaption class=" offset-4 blockquote-footer paragraph-default mt-2">
+            Kristi Turton Designer of BBa_K2683006, Lethbridge 2018
+          </figcaption>
+        </figure>
+
+        <p class="offset-1 col-9 lead my-5 text-center">Given the continued interest in FitD in iGEM competitions and its ability to perform its task as a standalone part in E.coli we have submitted BBa_K4323002 for consideration as the best basic part 2022. </p>
+  
+        </div>
+      </div>
+
+      <!--Literature time -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">References</h5>
+          <hr>
+
+          <p class="offset-1 col-9 citation-style">(1) Molloy, Mayer, D. A., Gaylo, M. J., Morse, J. T., Presti, K. T., Sawyko, P. M., Karatayev, A. Y., Burlakova, L. E., Laruelle, F., Nishikawa, K. C., & Griffin, B. H. (2013). Pseudomonas fluorescens strain CL145A – A biopesticide for the control of zebra and quagga mussels (Bivalvia: Dreissenidae). <em>Journal of Invertebrate Pathology</em>, <b>2013</b> 113(1), 104–114.<a href="https://doi.org/10.1016/j.jip.2012.12.012" target="_blank"> https://doi.org/10.1016/j.jip.2012.12.012</a> </p>
+          
+          <p class="offset-1 col-9 citation-style"> (2) Péchy-Tarr, M.; Bruck, D. J.; Maurhofer, M.; Fischer, E.; Vogne, C.; Henkels, M. D.; Donahue, K. M.; Grunder, J.; Loper, J. E.; Keel, C. Molecular Analysis of a Novel Gene Cluster Encoding an Insect Toxin in Plant-Associated Strains of Pseudomonas Fluorescens. <em>Environmental Microbiology</em> <b>2008</b>, 10 (9), 2368–2386</p>
+
+          <p class="offset-1 col-9 citation-style">(3)	Ruffner, B., Péchy-Tarr, M., Höfte, M., Bloemberg, G., Grunder, J., Keel, C., & Maurhofer, M. (2015). Evolutionary patchwork of an insecticidal toxin shared between plant-associated pseudomonads and the insect pathogens Photorhabdus and Xenorhabdus. <em>BMC genomics</em>, <b>2015</b> 16(1), 1-14. <a href="https://doi.org/10.1186/s12864-015-1763-2" target="_blank" >https://doi.org/10.1186/s12864-015-1763-2</a></p>
+
+          <p class="offset-1 col-9 citation-style">(4)	Daborn, P. J., Waterfield, N., Silva, C. P., Au, C. P., Sharma, S., & Ffrench-Constant, R. H. (2002). A single Photorhabdus gene, makes caterpillars floppy (mcf), allows Escherichia coli to persist within and kill insects. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, <b>2002</b> 99(16), 10742–10747.<a href="https://doi.org/10.1073/pnas.102068099" target="_blank"> https://doi.org/10.1073/pnas.102068099</a></p>
+
+          <p class="offset-1 col-9 citation-style">(5)	Dowling, Waterfield, N. R., Hares, M. C., Le Goff, G., Streuli, C. H., & ffrench-Constant, R. H. (2007). The Mcf1 toxin induces apoptosis via the mitochondrial pathway and apoptosis is attenuated by mutation of the BH3-like domain. <em>Cellular Microbiology</em>, <b>2007</b> 9(10), 2470–2484. <a href="https://doi.org/10.1111/j.1462-5822.2007.00974.x" target="_blank">https://doi.org/10.1111/j.1462-5822.2007.00974.x</a> </p>
+
+        
+  
+        </div>
+      </div>
+</main>
+
+{% endblock %}

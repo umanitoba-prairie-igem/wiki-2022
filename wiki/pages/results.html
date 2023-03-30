@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+  
+{% block title %}Results{% endblock %}
+{% block lead %}You can describe the results of your project and your future plans here.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Results</h1>
+            <p class="lead medium-importance">The main results of the ZebraZap</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- FitD  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Truncated FitD "mini FitD"</h5>
+          <hr>
+          <p class="offset-1 col-10">The truncated FitD functions as intended, albeit with slightly lower expression levels than desired. Detection by SDS-PAGE so has so far not been possible, despite many attempts, with any of the FitD produced by UNILausanne or UManitoba. The expression of these proteins clearly has room for optimization. Using an expression-plasmid could be a good first start, but we learnt this year that this is not always enough.  Given the low concentrations apparently involved, liquid chromatography-tandem mass spectrometry is a promising technique. This could be done on the cell lysate and for homogenized mussel tissue to provide conclusive evidence and shed much light on the issue.</p>
+
+          <p class="offset-1 col-10">The modified FitD expressed in <em> E.coli</em> has demonstrable a reproducible activity against Quagga Mussels, only a few graphs were shown for the sake of clarity. It could be noted that a total of 16 bioassays were conducted for FitD, as well as aerolysin disscussed later. The figure below shows all conditions tested. We chose only to show the tanks subject to the OD<sub>600</sub> cell lysate. </p>
+
+          <p class="offset-1 col-10">For FitD expression, the longer the cells are allowed to grow as measured by OD<em>600</em> the greater the toxicity observed. Cells taken from cultures with low optical density have drastically reduced toxicity after OD<sub>600</sub> =  0.5. Another trend is that the cell lysate is generally more toxic than the whole cells. Lastly, for FitD only the induced cells have any significant toxicity. We only chose to report a small fraction of the toxicity data to avoid making any premature conclusion. A true compairison would require usto screen for LD<sub>50</sub>, with know protein concentration. Note LD<sub>50</sub> refers to the dose requried to kill half of exposed organisms.
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-4 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/aerolysin/show-dont-tell.png">
+              <p class="offset-2 col-5 mt-1 mb-5">Figure 1. Summary of the different parameters examined during the bioassays. The optical density refers to the optical density of the culture used when a small sample of that culture what introduced to the mussel tanks. In total there were 4 separate flasks and 16 tanks of mussels during each assay. Considering modified FitD and aerolsyin the is a total of 32 trials for the UManitoba constructs.</p>
+            </div> 
+          </div>
+
+          <p class="offset-1 col-10">The truncation does not appear to have diminished the toxicity as shown by comparison to the full-length product produced by the native organism. As shown by the figure below. We do not consider the data below suggestive of improved toxicity, especially since the exact concentration of both products is not known. What effect the truncation may have had on the specificity of the toxin is not known and would need to be assessed. </p>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-5 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/fitd/fitd-toxicity.png">
+              <p class="offset-2 col-5 mt-1 mb-5">Figure 2. The induction of FitD is clearly the cause of the toxicity, the mussel are relatively healthy in the aquariums and the <em>E.coli</em> lysate itself is not toxic.Results obtained from tanks treated with cell lysate from cultures with high optical density OD<sub>600</sub>=1. </p>
+
+              <img  class="offset-2 col-5 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/fitd/fitd-toxicity-against-wild-type-final.png">
+              <p class="offset-2 col-5 mt-1 mb-5">Figure 3. The Truncation does not appear to have hindered the toxicity.Results obtained from tanks treated with cell lysate from cultures with high optical density OD<sub>600</sub>=1.</p>
+            </div> 
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Aerolysin -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Aerolysin as a Molluscicide</h5>
+          <hr>
+          <p class="offset-1 col-10">The protein aerolysin has been shown to be a candidate molluscicide. <em>E.coli</em> transformed with the aerolysin construct but not induced, were found to be very toxic to quagga mussels. Our optimism is based on the fact that, they outperformed every other treatment examined by team UManitoba and UNILussane. The comparatively poor performance demonstrated by the induced samples is believed to be a consequence of the chassis being targeted by the protein it was forced to express. The specificity of the toxin remains to be seen. Specificity assays are likely more important than optimizing expression at this stage. Recommendation to test against non-invasive mussels. Current our intuition is that it may be more suitable as a general molluscicide with something else providing specificity.</p>
+
+          <p class="offset-1 col-10">Regarding the different expression parameters aerolysin protein showed very hight toxicity at all contions tested. The protein binds surprisingly tightly to the Nickel resin, but we were able to purify the protein and show expression.</p>
+
+          <img  class="offset-2 col-4 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/aerolysin/aerolysin-purification.png">
+          <p class="offset-2 col-5 mt-1 mb-5">Figure 4. His-Trap Ni-column purified ACT. L: ladder, C5: 10 % B wash, D1: fraction of gradient at ~30 % B, D4: fraction of gradient at ~50 % B, D8: elution at 100 % B. A buffer: 20 mM Tris-HCl, 200 mM NaCl, pH 8.0; B buffer: 20 mM Tris-HCl, 200 mM NaCl, 300 mM imidazole, pH 8.0. Arrow: purified ACT protein, MW: 55.2 kDa.</p>
+
+          <img  class="offset-2 col-5 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/aerolysin/aerolysin-toxicity.png">
+              <p class="offset-2 col-5 mt-1 mb-5">Figure 5. The greatest toxicity is observed for non-inudced cells, note that the Induced cell are stil quite toxic. Results obtained from tanks treated with cell lysate from cultures with high optical density OD<sub>600</sub>=1.</p>
+
+  
+        </div>
+      </div>
+
+      <!-- Sensors -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Sensors</h5>
+          <hr>
+          <p class="offset-1 col-10">Achieving reliable sensing in the form of eGFP output proved to be more difficult than anticipated. Over the course of the project we built and attempted to measure the out put in response to NO<sub>3</sub>, PO<sub>4</sub>, O<sub>2</sub> and pH. We were able to assay and reliably measure NO<sub>3</sub> and PO<sub>4</sub>. The assays are explanined in detail in the experiments section. </p>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-5 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/promoter-stuff/nitrate-hill-function.png">
+              <p class="offset-2 col-5 mt-1 mb-5">Figure 6. Nitrate responsive promoter BBa_ clonned into. Experimental experience and results added to the iGEM registry.</p>
+            </div> 
+          </div>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-4 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/promoter-stuff/phosphate-hill-function.png">
+              <p class="offset-2 col-5 mt-1 mb-5">Figure 7. Nitrate responsive promoter BBa_ clonned into. Experimental experience and results added to the iGEM registry.</p>
+            </div> 
+          </div>
+  
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Summary</h5>
+          <hr>
+
+          <p class="offset-1 col-10">The sensors in this project were intended to add a level of redundency to soften any potential off-target effect the toxins may have. Nitrate and Phospate function as intended, but are not appropriate for application. The pH and oxygen sensors did not function as intended. At this point we would recommend that future experimenters device an alternate approach. </p>
+
+          <p class="offset-1 col-10">Both the modified FitD and the aerolysin appear to be very promising. A short list of next steps would be to optimized expression, critically evaluate toxicity LD<sub>50</sub> , perform more detailed analytics and think about moving to procaryotic algae. The experiments conducted have a high chance of being expanded into a continued project, what form this will take has yet to be determined.</p> 
+          
+  
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}

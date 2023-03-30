@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+  
+{% block title %}Proposed Implementation{% endblock %}
+{% block lead %}Explain how you would implement your project in the real world.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Implementation</h1>
+            <p class="lead medium-importance"></p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Best case scenario -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Environmental Release</h5>
+          <hr>
+          <p class="offset-1 col-10 my-4">The problem at the core of invasive mussels is that they can replicate in very high numbers in large bodies of water. In the waters, they invade they have little or no predators. Continuous applications of conventional chemicals are impractical as they become extremely dilute over large volumes and leave areas prone to re-infestation.The goal is to find a way to alter the environment in the most benign way possible to eliminate only the zebra mussels. A bio-control is ideal since it is self-replicating and specific. The major issues facing biocontrols  are off-target effects and containment.</p>
+
+          <p class="offset-1 col-10 my-4">The ZebraZap project was designed around two factors safety concerning its toxic effectors. In an ideal scenario, the modified organism would produce a toxin selective to zebra mussels only in the presence of the mussels, which we later changed to being only when ingested by the mussels. The idea is to keep the level of toxins in the environment as low as possible, even though the toxins would need to be considered safe before any deployment. Obviously, <em>E.coli</em> is not suitable for environmental release. We had envisioned that the system could be moved into procaryote algae with 50 μm diameter, the preferred food of the mussels. Just to be clear, in its current state ZebraZap is not ready for environmental release. Supposing that there are no issues switching organism, there are a number of safety issues which would be addressed.</p>
+
+          <p class="offset-1 col-10 my-4">First, a genetic containment strategy would need to be devised. This is an active area of research, encompassing everything from so-called “kill-switches” to engineering orthogonal genetic codes. Before any serious consideration for deployment, a robust strategy would need to be devised. This year we were more focused on trying to find ways to limit unnecessary toxin production, than genetic containment.</p>
+
+          <p class="offset-1 col-10 my-4">Second, the safety of the toxins would need to be assured. This would mean testing both proteins on a wide range of organisms at various concentrations to ensure no off-target effects. It is likely that the truncated FitD protein retains its high specificity, given that the full-length protein is known to be a major contributor to the toxicity of <em>P. fluorescens</em>, which is quite specific. To the best of our knowledge, there is little information concerning the toxicity of aerolysin in isolation. In summary, both of the proteins in this project are from opportunistic pathogens, they would be of very little use if they were harmless after all. As such it would be imperative to conduct extensive testing of each before release.</p>
+
+          <p class="offset-1 col-10 my-4">Third, the stability of the modifications would need to be ensured in some way. Plasmids are likely not suited to long-term deployment, especially if they impose a metabolic burden on the organism. There is a diverse range of ways to make modification more stable, but chromosome integration may be the most direct.</p>
+
+          <p class="offset-1 col-10 my-4">We have been advised by experts in the field that the style of implementation described above will depend largely on our ability to cope with zebra mussels. Currently, the general consensus has been to try to limit the spread and monitor the situation in infected regions. The incentive to deployment would depend largely on the extent of how the situation develops in the near future.</p>
+          
+          <p class="offset-1 col-10 my-4">As of yet the country of Canada does not have any sort of blanket legislation against the deployment of GMOs. In Canada at least the use of Genetically Modified Organisms in decided on a case-by-case basis. For context, being an agricultural province, a large portion of Manitoba is currently home to modified crops. The details of GMO regulation in Canada may only be interesting to certain audiences, so a short guide is included <a href="https://static.igem.wiki/teams/4323/wiki/gmo-release-regulations.pdf" target="_blank" style="color:blueviolet">here</a> for those interested.</p>
+  
+        </div>
+      </div>
+
+      <!-- Simple Bioreactor-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Closed Systems</h5>
+          <hr>
+          
+          <p class="offset-1 col-10 my-4">Adapting the products of ZebraZap in closed environments such as hydroelectric dams and other aquatic infrastructure would be a much more proximate goal. A large amount of toxin could be produced in a modest bioreactor thanks to the short generation time of <em>E.coli</em> Given the relatively modest requirements of small bioreactors, the toxins could be produced on-site.</p>
+
+          <p class="offset-1 col-10 my-4">Many hydroelectric generating sites require regular chlorine treatments to remain in good operational condition. The cell lysate has already been demonstrated to be effective against quagga mussel. In such a set up the bioreactor would be up-current, and the bioreactor-efflux would be connected to the main water input by a sterilization and lysis device.  The adoption of such a strategy would no doubt depend on the cost-benefit analysis against conventional chlorine treatments.</p>
+        </div>
+      </div>
+
+      <!-- get fancy with it  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Cargo in a Delivery System</h5>
+          <hr>
+          <p class="offset-1 col-10 my-4">One of the first ideas when coming up with ZebraZap was a biological encapsulation strategy, inspired by the <a href="https://2018.igem.org/Team:Lethbridge" target="_blank">Lethbridge 2018 VINCENT project</a>. After doing more research we realized that our cargo may not be easy to produce and focused on that. While we are still quite interested in algae as the delivery system, "micro FitD" and aerolysin have proven activity and would make great candidates for encapsulation.</p>
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}

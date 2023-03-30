@@ -1,0 +1,208 @@
+{% extends "layout.html" %}
+  
+{% block title %}Engineering Success{% endblock %}
+{% block lead %}Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Engineering</h1>
+            <p class="lead medium-importance"></p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Engineering Priciples  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Engineering Principles</h5>
+          <hr>
+          <p class="offset-1 col-10 py-2">Engineering principles were used throughout the ZebraZap Project by adopting the <b>D</b>esing-<b>B</b>uild-<b>T</b>est-<b>L</b>earn cycle in the overall project design. Furthermore, a strong emphasis on predictive design allowed us to successfully design an active variant of FitD that is nearly a third the length of the original. Engineering is a diverse discipline, therefore there is lots of variety when it comes to engineering principles. In addition to modelling, the engineering principles most used throughout ZebraZap are highlighted below.</p>
+
+          <h6 class="offset-1 col-10 mt-3">Decomposition</h6>
+          <p class="offset-1 col-10">The act of breaking up a large complex system into a number of simpler subsystems. The very first thing that we did in this project was split the problem of controlled expression of a toxin into the promoters (sensors) and toxins (actuators). </p>
+
+          <h6 class="offset-1 col-10 mt-4">Decoupling</h6>
+          <p class="offset-1 col-10">Also referred to as functional isolation or modular thinking. Assume that the different abstract pieces that make up your project don’t interact with each other, they are totally interchangeable. A natural progression from decompostion. Test and debug all the systems independently and then integrate them at the end.</p>
+
+          <h6 class="offset-1 col-10 mt-4">Parallelization</h6>
+          <p class="offset-1 col-10">Once you adopt the ideas of decomposition and decoupling there is no need to wait for one part to be done before working on the others. This allows projects to be completed efficiently.</p>
+
+          <h6 class="offset-1 col-10 mt-4">Standardization</h6>
+          <p class="offset-1 col-10 mb-5">Standardized parts from the registry were used extensively in ZebraZap. This allowed us more time to focus on designing our unique parts carefully and minimizing unwanted surprises.</p>
+          <hr>
+  
+        </div>
+      </div>
+
+      <!-- Note -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Note</h5>
+          <hr>
+          <p class="offset-1 col-10">In addition to the large-scale design of the project the individual elements such as aerolysin and FitD, were realized by adherence to engineering principles. The page will be dedicated to the promoter system as a clear example of engineering biology. </p>
+        </div>
+      </div>
+
+      <!-- Desing (I) -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Design (I)</h5>
+          <hr>
+          <p class="offset-1 col-10">After three rounds of consultation B.Spearin and C. Parks, experts from the aquatic invasive species center, we had an idea for what we considered the ideal bio-control device. It would exist passively in the environment until it detected Zebra Mussels at which point it would deliver a highly specific and non-bioaccumulating toxin and then turn off. </p>
+
+          <p class="offset-1 col-10">For the effectors, we decided on the set of proteins FitD and aerolysin. Since the effectors were a protein they made promoters a logical choice for the sensors. This meant the entire device could be assembled in the same plasmid. </p>
+
+          <p class="offset-1 col-10">The next step was to consider how we should go about detecting the zebra mussels. This took the form of a literature search for all the hallmarks of zebra mussels’ infestation. The most consistent observation was that water clarity significantly increased as a result of the various filter feeders (Secchi transparency). We considered a number of light-sensitive promoter systems but eventually ruled them out. We reasoned that this may not be practical and factors like water depth, shade and the day-night cycle would cause too much interference. Chlorophyll levels also drop significantly, and this could still be a viable detection method. We considered a genetic approach, but the genomes are not that well annotated. The complete genome only is published for the first time in 2021<sup>1</sup>. </p>
+
+          <p class="offset-1 col-10">So, we ruled out chlorophyll, water clarity and nucleic acids.</p>
+
+          <p class="offset-1 col-10">After searching through academic literature and government water quality reports we eventually found a reasonable consensus. The general observation seemed to be that as a result of the zebra mussel invasion there was a significant increase in nitrates and a decrease in phosphates.<sup>2-7</sup>We then chose the nitrate-induced BBa_K216005 and the phosphate represses BBa_K1682012.</p>
+
+          <p class="offset-1 col-10">Since we chose standard parts from the registry, this simplified the process of modelling using iBiomSym. The sensors seemed to have sufficient sensitivity at the concentrations we would need to work at. We also noted that the transition in the nitrate promoter seemed more abrupt than in the phosphate. We hypothesized that the nitrate promoter would allow for switch-like behaviour while the phosphate would be more gradual, like a dimmer. </p>
+
+          <div class="row mt-5 pt-3">
+            <div class="col">
+              <img  class="offset-2 col-6 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/promoter-stuff/ibiosim-nitrate.png">
+              <p class="offset-2 col-9 mt-1 mb-5">Figure 1. Nitrate promoter system simulated using iBioSym as outlined in the experimental methods. </p>
+            </div> 
+          </div>
+
+          
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-6 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/promoter-stuff/ibiosim-phosphate.png">
+              <p class="offset-2 col-9 mt-1 mb-5">Figure 2. Phospate promoter system simulated using iBioSym as outlined in the experimental methods.  </p>
+            </div> 
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Build + Test + Learn (I)-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Build/Test/Learn (I)</h5>
+          <hr>
+          
+          <p class="offset-1 col-10 my-4">Initially, we had intended to order the genes by synthesis and use BioBrick assemble to design a modular construct. Despite attempting several different protocols ligation was very inefficient. The project was completed instead using Gibson assembly.</p>
+
+          <p class="offset-1 col-10 my-4">The sensors were validated by measuring the fluorescence over optical density. Our original idea was to immediately move the promoter into the iGEM standard pSBS1C3 plasmid. We wanted to get the system into the standard backbone as soon as possible for characterization. We performed the fluorescence measurement and were surprised to find that the results were very poor. </p>
+
+          <p class="offset-1 col-10 my-4">We were surprised to find that eGFP expression was so low. We hypothesized that the reason for the low gene expression is that the pSB1C3 is a high copy number plasmid and that switching to a low copy number plasmid pET28b would be better suited to protein expression. At the time we considered pSB1C3 and pUCIDT interchangeable, as they are both high copy number plasmids and did not think to test expression in pUCIDT.</p>
+        </div>
+      </div>
+
+      <!-- DBTL II-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">DBTL (II)</h5>
+          <hr>
+          
+          <p class="offset-1 col-10 my-4">We moved our construct in its entirety into a pET28b plasmid.</p>
+
+          <p class="offset-1 col-10 my-4">Repeated the fluorescence titration experiment and the results were once again very poor.</p>
+
+          <p class="offset-1 col-10 my-4">We were surprised to find that eGFP expression was so low. We hypothesized that the reason for the low gene expression is that the pSB1C3 is a high copy number plasmid and that switching to a low copy number plasmid pET28b would be better suited to protein expression. At the time we considered pSB1C3 and pUCIDT interchangeable, as they are both high copy number plasmids and did not think to test expression in pUCIDT.</p>
+        </div>
+      </div>
+
+      <!-- DBTL III-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">DBTL (III)</h5>
+          <hr>
+          
+          <p class="offset-1 col-10 my-4">We performed the fluorescence characterization with the pUCIDT vector, and recorded a good dose-response curve that could be used as a starting point to optimizing the nitrate and phospate systems.</p>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-6 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/promoter-stuff/nitrate-in-different-plasmids.png">
+            <p class="offset-2 col-6 mt-1 mb-5">Figure 3. Graph summarizing the testing that was done to get the nitrate promoter behaving as desired. The experiment was repeated with more presicion after wards.</p>
+            </div> 
+          </div>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-6 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/promoter-stuff/nitrate-hill-function.png">
+              <p class="offset-2 col-6 mt-1 mb-5">Figure 4. The nitrate sensor BBa_K216005 cloned into pUCIDT with expression measured by fluorescence. Fit to a four parameter Hill equation.  </p>
+            </div> 
+          </div>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-6 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/promoter-stuff/phosphate-hill-function.png">
+              <p class="offset-2 col-6 mt-1 mb-5">Figure 5. The phospate sensor BBa_K1682012 cloned into pUCIDT with expression measured by fluorescence. Fit to a four parameter Hill equation.   </p>
+            </div> 
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DBTL IV-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">DBTL (IV) ?</h5>
+          <hr>
+          
+          <p class="offset-1 col-10 my-4">At this point, we were ready to either clone in the toxic genes or alter the strength of the ribosome binding site to begin to more closely match nitrate levels in the actual environment. We learnt that all high-copy number plasmids are not interchangeable and that if you use modelling software the predictions may be more specific than you think. While this may not be the version of the DBTL we had envisioned, it allowed us to “debug” our oversight by proceeding in a systematic fashion.</p>
+
+          <p class="offset-1 col-10 my-4">We excitedly planned another meeting with an aquatic species expert and then had to make yet another course correction. We were informed that government agencies have been monitoring the chemical concentrations of Manitoban waters, and there are not any consistent changes to water chemistry that can be associated with zebra mussels.</p>
+
+          <p class="offset-1 col-10 my-4">So, we had to table our ideas for new nitrate sensors and choose a different target. Ultimately this changes the sensing from the external environment to the internal environment of the zebra mussel stomach. The stomach of the mussels is an anoxygenic acidic environment. </p>
+
+          <p class="offset-1 col-10 my-4">We considered three pH sensors from the registry, as well as the O2 sensor, BBa_ K239005</p>
+
+          <p class="offset-1 col-10 my-4">BBa_K3196028: pH 2-4</p>
+
+          <p class="offset-1 col-10 my-4">BBa_K1231000: pH < 5.5</p>
+
+          <p class="offset-1 col-10 my-4"> BBa_K1231001: pH 5-7 (This was the most relevant pH range)</p>
+
+          <p class="offset-1 col-10 my-4">We had thought it would just be extremely acidic but some literature searching revealed otherwise. Stomach acid pH varies between organisms depending on how that organism is adapted to feeding.<sup>8</sup> In humans, the stomach pH can be low as 1.5 while in chickens, the pH is around 3.7.<sup>8</sup>Scavengers and carnivores generally have a lower stomach acid pH while herbivores are higher. <sup>8</sup> For Zebra mussels, the stomach acid pH has fortunately been reported to be between 6.0-6.9 depending on the phase of digestion. <sup>9</sup>.</p>
+
+          <p class="offset-1 col-10 my-4">Due to difficulties in testing, the oxygen and pH systems could not be made functional in time for the end of the iGEM 2022 season.</p>
+        </div>
+      </div>
+
+      <!-- Note -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Engineering Succsess</h5>
+          <hr>
+          <p class="offset-1 col-10">Detectors for a change in water chemistry, it had all seemed so neat and tidy on paper. Even though we used standardized parts it took many rounds of trial and error to get the promoters working. Had we used to pUCICT right away the project would have gone smoother, but we did not. Because we had a systematic approach we were able to catch the error and get the desired function.  </p>
+        </div>
+      </div>
+
+        <!--Literature time -->
+        <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">References</h5>
+          <hr>
+
+          <p class="offset-1 col-9 citation-style"> (1) McCartney, M. A.; Auch, B.; Kono, T.; Mallez, S.; Zhang, Y.; Obille, A.; Becker, A.; Abrahante, J. E.; Garbe, J.; Badalamenti, J. P.; Herman, A.; Mangelson, H.; Liachko, I.; Sullivan, S.; Sone, E. D.; Koren, S.; Silverstein, K. A. T.; Beckman, K. B.; Gohl, D. M. The Genome of the Zebra Mussel, Dreissena Polymorpha: A Resource for Comparative Genomics, Invasion Genetics, and Biocontrol. <em>G3 Genes, Genomes, Genet.</em> <b>2022</b>, 12 (2). <a href="https://doi.org/10.1093/g3journal/jkab423" target="_blank">https://doi.org/10.1093/g3journal/jkab423</a>.</p>
+
+          <p class="offset-1 col-9 citation-style">(2) Effects of recent zebra mussel invasion on water chemistry and phytoplankton production in a small Irish lake. Higgins et al.,<a href="http://www.aquaticinvasions.net/2008/AI_2008_3_1_Higgins_etal.pdf" target="_blank">. <b>2008</b> http://www.aquaticinvasions.net/2008/AI_2008_3_1_Higgins_etal.pdf</a></p>
+
+          <p class="offset-1 col-9 citation-style">(3) Retention of N and P by zebra mussels (Dreissena polymorpha Pallus) and its quantitative role in the nutrient budget of eutrophic Lake Ekoln, Sweden. <em>Biological Invasions</em> <b>2011</b>, <a href="https://link-springer-com.uml.idm.oclc.org/article/10.1007/s10530-011-9950-9" target="_blank">https://link-springer-com.uml.idm.oclc.org/article/10.1007/s10530-011-9950-9</a></p>
+
+          <p class="offset-1 col-9 citation-style">(4) Impact of Zebra Mussel Invasion on River Water Quality. Effler, S. W., Brooks, C. M., Whitehead, K., Wagner, B., Doerr, S. M., Perkins, M., Segfried, C.A., Walrath, L., Canale, R. P. <b>1996</b> <a href="https://www.jstor.org/stable/25044708" target="_blank">https://www.jstor.org/stable/25044708</a></p>
+
+          <p class="offset-1 col-9 citation-style">(5)Ecosystem-Level Effects of Zebra Mussels (Dreissena polymorpha): An Enclosure Experiment in Saginaw Bay, Lake Huron. 1995. Heath, R. T., Fahnenstiel, G.L., Gardner, W.S., Cavaletto, J.F., Hwang, S. <em>INternat. Assoc, Great Lakes</em> <b>1995</b> <a href="https://datospdf.com/download/ecosystem-level-effects-of-zebra-mussels-dreissena-polymorpha-an-enclosure-experiment-in-saginaw-bay-lake-huron-_5a4c358eb7d7bcb74fe9482b_pdf" tarhget="_blank">https://datospdf.com/download/ecosystem-level-effects-of-zebra-mussels-dreissena-polymorpha-an-enclosure-experiment-in-saginaw-bay-lake-huron-_5a4c358eb7d7bcb74fe9482b_pdf</a></p>
+
+          <p class="offset-1 col-9 citation-style">(6) Environment and Climate Change Canada, Manitoba Agriculture and Resource Development. (2020). State of Lake Winnipeg (2nd edition). <a href="https://www.gov.mb.ca/water/pubs/water/lakes-beaches-rivers/state_lake_wpg_report_tech.pdf" target="_blank">https://www.gov.mb.ca/water/pubs/water/lakes-beaches-rivers/state_lake_wpg_report_tech.pdf</a></p>
+
+          <p class="offset-1 col-9 citation-style">(7) The distribution, density, and biomass of the zebra mussel (Dreissena polymorpha) on natural substrates in Lake Winnipeg 2017-2019. Depew, D., Krutzelmann, E., Watchorn, K., Caskenette, A., Enders, E. <em>Journal of Great Lakes Research</em> <b>2021</b> <a href="https://doi-org.uml.idm.oclc.org/10.1016/j.jglr.2020.12.005" target="_blank">https://doi-org.uml.idm.oclc.org/10.1016/j.jglr.2020.12.005</a></p>
+
+          <p class="offset-1 col-9 citation-style">(8)  Beasley, D. E., Koltz, A. M., Lambert, J. E., Fierer, N., & Dunn, R. R. (2015). The Evolution of Stomach Acidity and Its Relevance to the Human Microbiome. <em>PloS one</em>, 10(7), 1-12. <a href="https://doi.org/10.1371/journal.pone.0134116 " target="_blank">https://doi.org/10.1371/journal.pone.0134116 </a></p>
+
+          <p class="offset-1 col-9 citation-style">(9) Thorp, & Covich, A. P. (2001). <em>Ecology and classification of North American freshwater invertebrates</em> (2nd ed.). Academic Press. </p>
+
+</main>
+
+{% endblock %}

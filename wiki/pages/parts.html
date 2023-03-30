@@ -1,0 +1,178 @@
+{% extends "layout.html" %}
+  
+{% block title %}Parts{% endblock %}
+{% block lead %}This page contains information about the parts created by the team.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Parts</h1>
+            <p class="lead medium-importance"></p>
+          </div>
+        </div>
+    </section>
+
+      <!-- iGEM Registry parts used in this project  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Pre-Existing iGEM Registry Parts</h5>
+        </div>
+
+        <div class="row mt-4 py-2">
+            <div class="col">
+                <table class="table table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Designers</th>
+                    <th scope="col">Length</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="http://parts.igem.org/Part:BBa_K216005" target="_blank">BBa_K216005</a></th>
+                        <td>Promoter (NO<sub>3</sub>)</td>
+                        <td>PyeaR, Activates transciption in presence of nitrates</td>
+                        <td>Edinburgh iGEM 2009 </td>
+                        <td>100 bp</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://parts.igem.org/Part:BBa_K1682012" target="_blank">BBa_K1682012</a></th>
+                        <td>Promoter (PO<sub>4</sub>)</td>
+                        <td>PhoA, Activates transcription in abscence of phospate</td>
+                        <td>iGEM15_HKUST-Rice</td>
+                        <td>85 bp</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://parts.igem.org/Part:BBa_K239005" target="_blank">BBa_K239005</a></th>
+                      <td>Promoter (O<sub>2</sub>)</td>
+                      <td>NarK, Activates transcription under anerobic conditions</td>
+                      <td>Axel Nystrom</td>
+                      <td>134 bp</td>
+                  </tr>
+                    <tr>
+                        <td><a href="http://parts.igem.org/Part:BBa_K1231001" target="_blank">BBa_K12231001</a></th>
+                        <td>Promoter (pH)</td>
+                        <td>Activates transcription under at low pH</td>
+                        <td>Brendan Tran, iGEM13_Northwestern</td>
+                        <td>264 bp</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://parts.igem.org/Part:BBa_I719005" target="_blank">BBa_I719005</a></th>
+                        <td>Promoter (~IPTG)</td>
+                        <td>T7 viral promoter, requires host with viral polymerase</td>
+                        <td>Imperial 2007</td>
+                        <td>23 bp</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://parts.igem.org/Part:BBa_B0032" target="_blank">BBa_B0032</a></th>
+                        <td>RBS</td>
+                        <td>A medium strenght ribosome binding site</td>
+                        <td>Vinay S Mahajan, Voichita D. Marinescu et al.</td>
+                        <td>13 bp</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://parts.igem.org/Part:BBa_B0015" target="_blank">BBa_B0015</a></th>
+                        <td>Terminator</td>
+                        <td>A double terminator, ends transcription</td>
+                        <td>Reshma Shetty</td>
+                        <td>129 bp</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://parts.igem.org/Part:BBa_K3033009" target="_blank">BBa_K3033009</a></th>
+                        <td>Reporter</td>
+                        <td>eGFP, enhanced green fluorescent protein</td>
+                        <td>Caitlin Conboy and Jennifer Braff</td>
+                        <td>717 bp</td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://parts.igem.org/Part:BBa_K2683006" target="_blank">BBa_K2683006</a></th>
+                        <td>Protein coding sequence</td>
+                        <td>FitD, molluscicidal protein <em>Pseudomonas protegens</em><a href="http://parts.igem.org/Part:BBa_K2683006"></td>
+                        <td> Kristi Turton,  iGEM18_Lethbridge</td>
+                        <td>9009 bp</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+
+      <!-- New or Improved parts -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance py-2">New or Improved Basic Parts</h5>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Designers</th>
+                    <th scope="col">Length</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4323000" target="_blank">BBa_K4323000</a></th>
+                    <td>Protein coding sequence</td>
+                    <td>Act  (Aerolysin-related cytotoxic enterotoxin) molluscicidal protein <em>Aeromonas hydrophila     </em><a href="https://2022.igem.wiki/umanitoba/contribution"><b style="color:blueviolet;">New</b></a></td>
+                    <td>UManitoba_2022</td>
+                    <td>1500 bp</td>
+                </tr>
+                <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4323002" target="_blank">BBa_K4323002</a></th>
+                    <td>Protein coding sequence</td>
+                    <td>FitD, molluscicidal protein<em> Pseudomonas protegens     </em><a href="https://2022.igem.wiki/umanitoba/improve"><b style="color:blueviolet;">Improved</b></a></td>
+                    <td>UManitoba_2022</td>
+                    <td>2745 bp</td>
+                </tr>
+                
+                </tbody>
+            </table>
+        </div> <!-- end col-->
+      </div> <!-- end row-->
+
+      <!-- New combination parts table -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance py-2">New Combination Parts</h5>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Designers</th>
+                    <th scope="col">Length</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4323001" target="_blank">BBa_K4323001</a></th>
+                    <td>Protein Expression System</td>
+                    <td>IPTG induced Act Expresion</td>
+                    <td>UManitoba_2022</td>
+                    <td>1687 bp</td>
+                </tr>
+                <tr>
+                    <td><a href="http://parts.igem.org/Part:BBa_K4323003" target="_blank">BBa_K4323003</a></th>
+                    <td>Protein Expression System</td>
+                    <td>IPTG induced FitD Expresion</td>
+                    <td>UManitoba_2022</td>
+                    <td>2932 bp</td>
+                </tr>
+                </tbody>
+            </table>
+        </div> <!-- end col-->
+      </div> <!-- end row-->
+
+</main>
+
+{% endblock %}

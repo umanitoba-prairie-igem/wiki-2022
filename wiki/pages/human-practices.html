@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+  
+{% block title %}Human Practices{% endblock %}
+{% block lead %}We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.{% endblock %}
+
+{% block page_content %}
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Human Practices</h1>
+            <p class="lead medium-importance"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Post-Secondary -->
+    <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+      <div class="col mt-2">
+        <h5 class="display-6 medium-importance">The Experts </h5>
+        <hr>
+
+      <!-- Brendin Spearing Oceans and Fisheries -->
+      <div class="row mt-5 mb-5">
+        <div class="col offset-1"><img src="https://static.igem.wiki/teams/4323/wiki/communications/download.png" class="img-thumbnail other-logo"></div>
+        <div class="col-6">
+
+          <h6 class="display-6 paragraph-default">Brenden Spearin AIS Regional Coordinator – Prairies at Fisheries and Oceans Canada</h6>
+          <p>Mr. Spearin explained the scope of the problem with invasive mussels. How they outcompete endogenous species and destabilize food webs. He confirmed that the estimates we have read placing the cost of zebra mussels in the millions of dollars were not hyperbole. This was one of our earliest contacts with stakeholders, in March.</p>
+
+          <p><b>Outcome</b>: We had a professional opinion to reinforce that this is a valid problem for synthetic biology, and we were not going to be “overengineering” a solution that may already exist.</p>
+        
+        </div>
+      </div>
+
+      <!-- Candace Parks Aquatic Invasive Species (AIS) Specialist -->
+      <div class="row mt-5 mb-5">
+        <div class="col offset-1"><img src="https://static.igem.wiki/teams/4323/wiki/communications/x-220921-ais-manitoba-logo.jpg" class="img-thumbnail other-logo"></div>
+        <div class="col-6">
+
+          <h6 class="display-6 paragraph-default">Candace Parks Aquatic Invasive Species (AIS) Specialist</h6>
+          <p>C. Parks Suggested that we focus on methods for the elimination of the mussels. Detection was by now means simple, but villager nets are actually quite good, and e-DNA is getting increasingly good. We had corresponded with C. Parks during the early and mid-stage of the project up until early July.</p>
+
+          <p>She inspired us to go for the “moon shot” of finding a way to eliminate zebra mussels from a lake they had already colonized. She explained how at this point in time there is not really any way of reversing infestation. Spread could be slowed, detected and infrastructure cleared, but reversal was not really in the cards.The brainstorming that resulted from this dialogue eventually resulted in the core of the ZebraZap project. With our “blue-sky” goal of a self-replicating and self-regulating bio-control capable of reversing zebra mussel infestation. </p>
+
+          <p><b>Outcome</b>: The decision to focus on a possible way to recover aquatic systems that might otherwise be considered lost causes. It was this exchange that set the ZebraZap project into motion.</p>
+        
+        </div>
+      </div>
+
+      <!-- Candace Parks Aquatic Invasive Species (AIS) Specialist -->
+      <div class="row mt-5 mb-5">
+        <div class="col offset-1"><img src="https://static.igem.wiki/teams/4323/wiki/communications/x-220521-igem-logo.png" class="img-thumbnail other-logo"></div>
+        <div class="col-6">
+
+          <h6 class="display-6 paragraph-default">Kristi Turton – Worked with FitD in the Past</h6>
+          <p>While not a zebra mussel expert Kristi is an iGEM alumnus who had worked on a zebra mussel project in the past. She helped bring us up to speed on the history of invasive mussel projects in iGEM. Specifically, regarding the troublesome FitD protein. This helped us ensure that we were going to focus on the issues already identified, instead of having to find out the hard way and lose precious time. We are happy to report that with BBa_4323002 there is now a reliable FitD BioBrick.</p>
+
+          <p><b>Outcome</b>: We placed special emphasis on the FitD protein and were better prepared for its eccentricities when we moved into the testing phase. </p>
+        
+        </div>
+      </div>
+
+      <!-- Candace Parks Aquatic Invasive Species (AIS) Specialist -->
+      <div class="row mt-5 mb-5">
+        <div class="col offset-1"><img src="https://static.igem.wiki/teams/4323/wiki/communications/x-220921-invasive-species-centre-logo.png" class="img-thumbnail other-logo"></div>
+        <div class="col-6">
+
+          <h6 class="display-6 paragraph-default">Renata Claudi - Chief Scientist at RNT Consulting & Aquatic invasive species coordinator for Ontario and the prairie</h6>
+          <p>We met virtually a few times with R. Claudi during the later stages of the project July, August, September. She helped us to understand that the literature we had based are sensing assumption on was not generalizable. While it may have been true in those isolated examples it was not to be interpreted as a causal relation between zebra mussels and water chemistry. We acted on her input to devise a viable alternative sensing strategy. We also discussed the regulations surrounding GMOs and the probability of acceptance, the next steps for a project like this.</p>
+
+          <p><b>Outcome</b>: Moved the sensing strategy from the external environment based on nitrates and phosphates to the internal environment base on pH and oxygen.  </p>
+
+          <figure class="text-center">
+            <blockquote class=" offset-1 blockquote col-10 ">
+              <p>"Removing zebra mussels from large bodies of water is not possible with current technologies. There are limited choices when it comes to remediation, which makes it a prime area for novel research. The UManitoba team accepted and acted on professional opinions regarding the feasibility of the project, even when they had to redesign significant portions of their project."</p>
+            </blockquote>
+            <figcaption class=" offset-4 blockquote-footer paragraph-default mt-2">
+              Renata Claudi
+            </figcaption>
+          </figure>
+        
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+  
+{% block title %}Project Description{% endblock %}
+{% block lead %}Describe how and why you chose your iGEM project.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Description</h1>
+            <p class="lead medium-importance"></p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Why Zebra mussels? -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance pt-1">Why Zebra Mussels?</h5>
+          <hr>
+          <p class="offset-1 col-10 pb-2">The invasion of natural ecosystems by zebra mussels is a long-standing global issue that has also recently become a pressing local issue in Manitoba. The mussels grow to such an extent that they seriously damage aquatic infrastructure. To make matters worse, they can seriously destabilize the food web due to excessive consumption of algae, a particular concern of fisheries. The economic damage caused by these pests varies based on the size of the ecosystem affected but is always measured in millions of dollars. In brief zebra mussels disrupt ecosytems, damage infrastructure and their sharp shells are generally a nuisance. </p>
+  
+        </div>
+      </div>
+
+      <!-- Why use Synthetic Biology?  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance pt-1">Why use Synthetic Biology?</h5>
+          <hr>
+          <p class="offset-1 col-10 pb-2">Zebra mussel infestations are a huge problem without an ideal solution. Most efforts are directed toward monitoring and attempting to reduce the spread of these organisms. When it comes to removing the organism there are few good options. Chemical methods such as potash and bleach are currently in use at power plants and other aquatic infrastructure across the province. However, these require constant re-application, which is only possible with small volumes of water. To make matters worse, treatments that make use of oxidizing chemicals can further damage infrastructure and are not suitable for environmental use.<p>
+
+          <p class="offset-1 col-10 pb-2">A bio-based approach using protein toxins allows for control without the use of harsh chemicals and only requires fermentation set-ups to produce. Furthermore, as bio-control technology improves this has the potential to be self-replicating. This is likely a requirement to treat huge bodies of water such as The Great Lakes and lake Winnipeg.</p>
+        </div>
+      </div>
+
+      <!-- ZebraZap: the Big Picture  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance pt-1"> ZebraZap: the Big Picture</h5>
+          <hr>
+          <p class="offset-1 col-10 pb-2">Inspired by the use of whole heat-treated bacterial cells of <em>Pseudomonas fluorescens</em> as a natural molluscicide, we set out to move the active components of these bacteria into discrete genetic modules. This way they could be more easily transferred to different organisms and are generally more compatible with integration into other synthetic biology approaches. We designed pieces of DNA for modified FitD from <em>Pseudomonas protogens</em> and aerolysin from <em>Aeromonas hydrophila</em>.<p>
+
+          <p class="offset-1 col-10 pb-2">As a complement to this, we looked for promoters in the iGEM registry that would control toxin expression. Initialy the toxin was produced in response to environmental cues associated with zebra mussels. Later we switched our focus to the stomach environment of the mussels themselves. </p>
+        </div>
+      </div>
+
+      <!-- Single construc general Design  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance pt-1">Single Construct Design</h5>
+          <hr>
+          <p class="offset-1 col-10 py-2">Ultimately the project involved the creation of 6 genetic contructs made entirely of basic genetic parts. Every construct shared internal cut sites using commonly available restriction sites. The coding region shown in green can easily be mouved out. It is far easier to make the coding region the site for internal exange, as promoters are very small and tend to cause subcloning issues.<p>
+
+          <p class="offset-1 col-10 mb-5">The simplicity of the core design was key to the project for three main reasons. First, the coding region can be left empty if ordering the parts from a synthethis compay, this allows a larger variety of the contructs to be quickly and cheaply synthesized. Second, by usging common cut sites surrounding the coding region it is simple to mouve in either of the toxic genes for any of the promoters. Third, the entire assemblly can easily be mouved between plasmids since it is flanked by a second set of common cut sites. Note, that the original resctriction assembly was later done partially by Gibson assembly.</p>
+        </div> <!-- End of first row-->
+          
+
+        <div class="row">
+          <div class="col">
+            <img  class="offset-1 col-8 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/genetic-pictures/plasmid-map-simple.png">
+            <p class="offset-1 col-8 mt-1">Figure 1. A schematic diagram showing the simplicity of the core constructs used for the project. The blue arrow represents the promoter, 5 different promoters were used over the course of the project. The Ribosome binding site, shown in yellow, and the terminator shown in red were kept constant throughout the entire project. Over the course of the project four plasmid backbones were used, pUCIDT as a (container for sythesized genes), pSB1C3 (the iGEM standard) and pQE (origninal vercotr containing eGFP) and pET28b (a low copy number vector optimized for protein expression).</p>
+          </div> <!-- End of Second row-->
+        </div>
+
+      </div>
+
+      <!-- Promoter Design -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance pt-1">Various Promoters with eGFP in the Coding Region</h5>
+          <hr>
+          <p class="offset-1 col-10 py-2">All of the candidate promoters were assembled under indentical conditions to verify the response range. It is not enough that promoters sense the analyte, the response range of the promoter needs to match the changes in water chemistry. The basic project flow is eGFP was cloned into every promoter assembly. Then the entire assembly was mouved into pSB1C3. Gibson assembly was used in the later steps due to it's very high efficiency. <p>
+        </div> 
+          
+
+        <div class="row">
+          <div class="col">
+            <img  class="offset-3 col-10 img-thumbnail figure-img" src="https://static.igem.wiki/teams/4323/wiki/genetic-pictures/promotes-complicated.png">
+            <p class="offset-3 col-5 mt-1">Figure 2. A schematic diagram which demonstrates the cloning workflow for promoter characterization. In addition to the standard BBa_ part numbers there is a second identifier iG0___. The later is an arbiratry ID for internal assigment. It can be used to quickly find the plasmid in Experiments Supplemental information. Of course iGEM  part numbers are included for all the most important pieces of this project.</p>
+          </div> 
+        </div>
+      </div>
+
+      <!-- Cloning the molluscicide proteins-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance pt-1">Cloning Molluscicide Proteins </h5>
+          <hr>
+          <p class="offset-1 col-10 py-2">The cloning work involved with the molluscicide was relatively minimal. It should be noted that we first inserted the molluscicide toxins into at pET28b plasmid instead of the more conventional pSB1C3. The pET28b plasmid is low copy number, and generally better for protein expression than a high copy number plasmid like pSB1C3. Our modified protein sequences were designed <em>in-sillico</em> and we wanted to eliminate a potential source of error. It remains to be seen how this protein expresses in pSB1C3.<p>
+        </div> 
+          
+
+        <div class="row">
+          <div class="col">
+            <img  class="offset-3 col-10 img-thumbnail figure-img" src="https://static.igem.wiki/teams/4323/wiki/genetic-pictures/toxin-clonning.png">
+            <p class="offset-3 col-5 mt-1">Figure 3. A schematic diagram which demonstrates the cloning workflow for the molluscicide proteins. In addition to the standard BBa_ part numbers there is a second identifier iG0___. The later is an arbitrary ID for internal assigment. It can be used to quickly find the plasmid in Experiments Supplemental information. Of course iGEM  part numbers are included for all the most important pieces of this project.</p>
+          </div> 
+        </div>
+      </div>
+
+      <!-- Complete Clonning Workflow-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance pt-1">Complete Cloning Workflow</h5>
+          <hr>
+        </div> 
+          
+
+        <div class="row">
+          <div class="col">
+            <img  class=" offset-1 col-12 img-thumbnail figure-img" src="https://static.igem.wiki/teams/4323/wiki/genetic-pictures/complicated.png">
+            <p class="offset-1 col-9 mt-1 pb-2">Figure 4. A schematic diagram which demonstrates the cloning workflow for the entire project. The cloning work was parallelized to allow the parts to be assembled and characterized separately. At the end the toxic genes are placed under the control of the promoters.  In addition to the standard BBa_ part numbers there is a second identifier iG0___. The later is an arbitrary ID for internal assigment. It can be used to quickly find the plasmid in Experiments Supplemental information. Of course iGEM  part numbers are included for all the most important pieces of this project.</p>
+          </div> 
+        </div>
+      </div>
+
+        <!-- Further Reading-->
+        <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+          <div class="col mt-2">
+            <h5 class="display-6 medium-importance pt-1">Further Reading</h5>
+            <hr>
+            <p class="col offset-1 col-10">When speaking about the impact of an invasive species that is present in so many ecosystems, the effect of zebra mussel invasion and the manner governments try to combat them are of course varied. The statements above are factual, but to avoid misspeaking much of the backround information surrounding the impact of zebra mussels is vague. Some readers may feel that is not specific enought. Such readers are encouraged to consult the literature below.</p>
+
+            <p class="offset-1 col-9 mt-1 pb-2 citation-style">McCartney, M. A.; Auch, B.; Kono, T.; Mallez, S.; Zhang, Y.; Obille, A.; Becker, A.; Abrahante, J. E.; Garbe, J.; Badalamenti, J. P.; Herman, A.; Mangelson, H.; Liachko, I.; Sullivan, S.; Sone, E. D.; Koren, S.; Silverstein, K. A. T.; Beckman, K. B.; Gohl, D. M. The Genome of the Zebra Mussel, Dreissena Polymorpha: A Resource for Comparative Genomics, Invasion Genetics, and Biocontrol. G3 Genes, Genomes, Genet. 2022, 12 (2). https://doi.org/10.1093/g3journal/jkab423.</p>
+
+            <p class="offset-1 col-9 mt-1 pb-2">Higgins, T. M.; Grennan, J. M.; Mccarthy, T. K. Effects of Recent Zebra Mussel Invasion on Water Chemistry and Phytoplankton Production in a Small Irish Lake. Aquat. Invasions 2008, 3 (1), 14–20. https://doi.org/10.3391/ai.2008.3.1.4</p>
+
+            <p class="offset-1 col-9 mt-1 pb-2">Bykova, O.; Laursen, A.; Bostan, V.; Bautista, J.; McCarthy, L. Do Zebra Mussels (Dreissena Polymorpha) Alter Lake Water Chemistry in a Way That Favours Microcystis Growth? Sci. Total Environ. 2006, 371 (1–3), 362–372. https://doi.org/10.1016/j.scitotenv.2006.08.022.</p>
+
+            <p class="offset-1 col-9 mt-1 pb-2">Holland, R. E. Changes in Planktonic Diatoms and Water Transparency in Hatchery Bay, Bass Island Area, Western Lake Erie Since the Establishment of the Zebra Mussel. J. Great Lakes Res. 1993, 19 (3), 617–624. https://doi.org/10.1016/S0380-1330(93)71245-9</p>
+
+            
+          </div> 
+
+        </div>
+</main>
+
+{% endblock %}

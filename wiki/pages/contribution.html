@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+  
+{% block title %}Contribution{% endblock %}
+{% block lead %}Make a useful contribution for future iGEM teams. Use this page to document that contribution.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Contribution</h1>
+            <p class="lead medium-importance">Aerolysin - BBa_K4323000 & BBa_K4323001</p>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+      <!-- Design -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Design</h5>
+          <hr>
+          <p class="offset-1 col-10">The ideal compound for controlling zebra mussels should be as specific as possible, readily bio-degradable, and able to be reliably produced by a large range of model organisms. Given that these compounds are intended for environmental deployment, specificity was identified as the primary design constraint.  Proteins characteristically have high specificity interactions with many of their substrates. For this reason, protein toxins were chosen over small molecules as the bio-control effector. </p>
+
+          <p class="offset-1 col-10">In addition to the FitD toxin already in the registry, we wanted to add a novel molluscicide to the iGEM registry. While conducting a literature search for further toxins we came across the promising candidate Aerolysin from the organism <em>Aeromonas hydrophila</em>    .<sup>1</sup> Like FitD this is a pore-forming toxin (PFT). It is small enough that it can be easily cloned and synthesized. The mode of action of this protein is complex since it can only function as a heptamer (7 copies working together). It was noted that membrane proteins need to be excreted to be active and tend to aggregate.<sup>2</sup></p>
+          <p class="offset-1 col-10"></p>
+
+          <div class="row">
+            <div class="col">
+              <img  class="offset-2 col-8 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/aerolysin/aerolysin.png">
+              <p class="offset-2 col-8 mt-1 mb-5">Figure 1. Alphafold predicted structure (AF-P09167-F1) of aerolysin from <em>Aeromonas hydrophila</em>. This is the structure that was used as the starting point for the molecular dynamics simulation. </p>
+            </div> 
+          </div> <!-- Here is the first of the page, a nice crystal structure-->
+
+          <p class="offset-1 col-10">This was flagged as a potential concern, so we decided to run some simulations before proceeding to the build phase. We wanted to see if the produced protein would be stable. We opted for a molecular dynamics simulation originally using the <a href="https://www.gromacs.org/" target="_blank" style="color:bluevioletviolet">GROMACS</a> software<sup>3</sup>. This is included since it was part of the design and a useful tool, but ultimately we opted for the CARMM36 force field.</p>
+
+          
+          <div class="row">
+            <div class="col">
+              <img  class="offset-2 col-8 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/aerolysin/aerolysin-optimized.gif">
+              <p class="offset-2 col-8 mt-1 mb-5">Figure 2. Molecular dynamics simulation of the aerolysin protein. Note the segment in blue has the most motion, and could just genuinely be a mobile part of the structure. The rest is fairly stable. </p>
+            </div> 
+          </div> <!-- Here is the molecular dynamics video for the toxin that we made-->
+
+          <p class="offset-1 col-10">In a nutshell, molecular dynamics begin with a protein structure and then simulates the behaviour of the protein over a period of time. The aerolysin structure used for the simulation was an alpha fold predicted structure. There are crystal structures, but they are incomplete. The figure below summarizes the paramters we were most interested in from the model. This supports the idea that we could get a stable structure in solution.</p>
+
+          <div class="row">
+            <div class="col">
+              <img  class="offset-2 col-6 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/aerolysin/aerolysin-simmulation-final.png">
+              <p class="offset-2 col-6 mt-1 ">Figure 3. Summary of the most important results from the dynamics simulation.</p>
+            </div> 
+          </div> <!-- Here is the information that we actually extracted from the molecular dynamics-->
+        </div>
+      </div>
+
+
+
+      <!-- Build -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Build</h5>
+          <hr>
+          <p class="offset-1 col-10 my-4">In any type of design, there comes a point where you think something could work, but you cannot know until you test. After research and modelling, we proceeded to the build phase. The sequence was synthesized and then cloned using Gibson assembly into the pET28b vector, as outlined in the description. Ultimately we opted to keep the C-terminal pro-peptide so our sequence was very similar to <a href="https://www.uniprot.org/uniprotkb/P09167/entry" target="_blank" style="color:bluevioletviolet">Uniprot entry P09167</a>. The coding region was 1497 base pairs in length coding for 499 amino acids. The construct was modified with a C-terminal His tag. This allows expression to be more easily tested as the protein could be purified by affinity chromatography.</p>
+        </div>
+      </div>
+
+      <!-- Test -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Test</h5>
+          <hr>
+          <p class="offset-1 col-10 my-4">For proof of expression, the test is to purify the expressed protein by Immobilized metal affinity chromatography (IMAC).</p>
+          <img  class="offset-2 col-4 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/aerolysin/aerolysin-purification.png">
+          <p class="offset-2 col-5 mt-1 mb-5">Figure 4. His-Trap Ni-column purified ACT. L: ladder, C5: 10 % B wash, D1: fraction of gradient at ~30 % B, D4: fraction of gradient at ~50 % B, D8: elution at 100 % B. A buffer: 20 mM Tris-HCl, 200 mM NaCl, pH 8.0; B buffer: 20 mM Tris-HCl, 200 mM NaCl, 300 mM imidazole, pH 8.0. Arrow: purified ACT protein, MW: 55.2 kDa.</p>
+
+          <p class="offset-1 col-10 my-4">The Bioassay was conducted by our partners <a href="https://2022.igem.wiki/unilausanne/" target="_blank" style="color:bluevioletviolet">UNILausanne</a>. The bioassay was conducted on quagga mussels (<em>Dreissena bugensis</em>). This is another invasive mussel species very similar to Zebra mussels (<em>Dreissena polymorpha</em>).</p>
+
+          <div class="row">
+            <div class="col">
+              <img  class="offset-1 col-9 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/aerolysin/aerolysin-toxicity.png">
+              <p class="offset-1 col-9 mt-1 ">Figure 5. Notice that the non-induced sample shown in red is apparently more toxic than the induced sample shown in green.</p>
+            </div> 
+          </div>
+
+        </div>
+      </div>
+
+    <!-- Learn -->
+    <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+      <div class="col mt-2">
+        <h5 class="display-6 medium-importance">Learn</h5>
+        <hr>
+        <p class="offset-1 col-10 my-4">The experiments conducted by <a href="https://2022.igem.wiki/unilausanne/" target="_blank" style="color:bluevioletviolet">UNILausanne</a> demonstrate clearly that the aerolysin toxin when transformed into <em>E.coli</em> is clearly capable of eliminating quagga mussels. In this sense the part is functioning with its desired function, to be toxic to invasive mussels. In all cases the aerolysin exhibited better toxicity when cell lysate was added to the mussel tanks instead of whole cells. While mussels are filter feeders they can be very selective with the particle size they actually admit to their stomachs. Complete toxicity data provided by <a href="https://2022.igem.wiki/unilausanne/" target="_blank" style="color:bluevioletviolet">UNILausanne</a> is provided in the Experiments page.</p>
+        <p class="offset-1 col-10 my-4">Through testing, we also uncovered some room for improvement. The greatest toxicity was observed in cells which had the plasmid but were never induced to produce the product. Toxin production was controlled by the common T7 system. Cells where no isopropyl β-D-1-thiogalactopyranoside (IPTG) was added showed the best performance. It appears that in our system more functional protein was being produced by “leaky expression” than by induction.</p>
+
+        <p class="offset-1 col-8 my-4">There are at least a couple of possible reasons for this</p>
+        <p class="offset-2 col-9 my-4">(1)	Aerolysin is disrupting the membrane of <em>E.coli</em> itself. At high levels of production, the producer simply dies and cannot produce any more proteins. Membrane toxins are often kept safe to the host organisms by way of chaperones and or subcellular localization. Consider reducing temperature of cultures or adding weaker ribosom binding site to find the expression optimum.</p>
+        <p class="offset-2 col-9 my-4">(2)	Overexpression causes the protein to aggregate and becomes non-functional. While still a possibility, this can usually be seen as a large SDS-PAGE band in the insoluble fraction. Resuspension in a denaturant should be able to detect such a scenario.</p>
+      </div>
+    </div>
+
+    
+      <!-- Conclusion and setting up for DBLT(II) -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Conclusion and Set-Up of for DBTL(II)</h5>
+          <hr>
+          <p class="offset-1 col-10 my-4">By making an effort to follow engineering principles and the Design Build Test Lear cycle. We were able to demonstrate toxicity in invasive mussels for aerolysin produced by <em>E.coli</em>. Overall, we were very pleased with the aerolysin protein as a potential molluscicide. The initial data suggests that it may even be more potent than FitD. </p>
+
+          <p class="offset-1 col-10 my-4">If we had time for a second cycle we would focus on increasing the expression levels of this protein. One promising start would be to add localization signals or secretion tags. The Open <em>E.coli</em> <a href="https://stanford.freegenes.org/collections/igem-collection-2-0/products/expression-tookit#bionet" target="_blank" style="color:bluevioletviolet">Protein Expression Toolkit</a>, provided in the iGEM distribution 2022, would be an excellent place to start. This could be a way to mitigate the toxicity of the product on the expression organism. UManitoba in partnership with UNILausanne has added a new option to the iGEM registry for treatment of invasive mussels, available as either the stand-alone sequence or as the combination part.</p>
+        </div>
+      </div>
+
+
+      <!-- Literature Time -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance"> Main References</h5>
+          <hr>
+          <p class="offset-1 col-10">(1)	Iacovache, I.; Degiacomi, M. T.; Pernot, L.; Ho, S.; Schiltz, M.; Dal Peraro, M.; van der Goot, F. G. Dual Chaperone Role of the C-Terminal Propeptide in Folding and Oligomerization of the Pore-Forming Toxin Aerolysin. , <em>PLoS Pathogens</em> <b>2011</b>, 7 (7). </p>
+          <p class="offset-1 col-10">(2)	Howard, S.P., Buckley, J.T. Molecular cloning and expression in Escherichia coli of the structural gene for the hemolytic toxin aerolysin from Aeromonas hydrophila . Molec. Gen. Genet. 204, 289–295 (1986).
+          <a href="https://doi.org/10.1007/BF00425512" target="_blank" style="color:bluevioletviolet">https://doi.org/10.1007/BF00425512</a></p>
+          <p class="offset-1 col-10">(3)	J.A. Lemkul (2018) "From Proteins to Perturbed Hamiltonians: A Suite of Tutorials for the GROMACS-2018 Molecular Simulation Package, v1.0" Living J. Comp. Mol. Sci. 1 (1): 5068.</p>
+          <h5 class="display-6 medium-importance">Further Reading</h5>
+          <hr>
+
+          <p class="offset-1 col-10">Chopra, A. K.; Pham, R.; Houston, C. W. Cloning and Expression of Putative Cytotonic Enterotoxin-Encoding Genes from <em>Aeromonas Hydrophila</em>. <em>Gene</em> <b>1994</b>, 139 (1), 87–91.</p>
+          <p class="offset-1 col-10">Galindo, C. L.; Fadl, A. A.; Sha, J.; Gutierrez, C.; Popov, V. L.; Boldogh, I.; Aggarwal, B. B.; Chopra, A. K. Aeromonas Hydrophila Cytotoxic Enterotoxin Activates Mitogen-Activated Protein Kinases and Induces Apoptosis in Murine Macrophages and Human Intestinal Epithelial Cells. <em>Journal of Biological Chemistry</em> <b>2004</b>, 279 (36), 37597–37612</p>
+          <p class="offset-1 col-10">Mathai, P.P., Bertram, J.H., Padhi, S.K. et al. Influence of Environmental Stressors on the Microbiota of Zebra Mussels (Dreissena polymorpha). Microb Ecol 81, 1042–1053 <b>2021</b> <a href="https://doi.org/10.1007/s00248-020-01642-2" target="_blank" ">https://doi.org/10.1007/s00248-020-01642-2</a></p>
+          <p class="offset-1 col-10">Iacovache, I.; De Carlo, S.; Cirauqui, N.; Dal Peraro, M.; van der Goot, F. G.; Zuber, B. Cryo-EM Structure of Aerolysin Variants Reveals a Novel Protein Fold and the Pore-Formation Process. <em>Nature Communications</em> <b>2016</b>, 7 (1). </p>
+
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+{% block lead %}<b>Welcome to iGEM 2022!</b> Your team has been approved and you are ready to start the iGEM season!{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <div class="container-fluid justify-content-center pt-5">
+            <img class="title-card" src="https://static.igem.wiki/teams/4323/wiki/home-page-intro.png">
+    </div>
+
+    <!-- Sub-title -->
+    <div class="container-fluid pb-5">
+        <div class="row text-center">
+            <h1 class="display-5">A Smart Bio-Based Device For Controlling Invasive Zebra Mussels</h1>
+        </div>
+    </div>
+
+    <!-- Intro Video-->
+    <div class="container">
+      <div class="row">
+        <div class=" offset-2 col">
+          <iframe title="UManitoba: A smart bio-based device to monitor and control invasive zebra mussels (2022) - Project Promotion [English]" width="800" height="400" src="https://video.igem.org/videos/embed/da4e6d02-4ca8-4251-a575-428eaf64a9c5" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- main content -->
+    <div class="container pt-5">
+        <div class="row my-5">
+            <div class="text-sm-center">
+                <h2 class="display-5">Zebra Mussel Invasion !</h2>    
+            </div>
+            <div class="offset-3 col-6 text-sm-center">
+                <p class="lead medium-importance">
+                    Native to the Caspian Sea and the Black Sea <em>Dreissena polymorpha</em> is a globe trotting invasive species. 
+                </p>
+            </div>
+        </div>
+
+        <!-- First Block  with the .gif-->
+        <div class="row py-5">
+            <div class="col-sm-6 text-center">
+                <h2 class="display-6">Where are they?</h2>
+                <p class="lead paragraph-default">
+                    Zebra Mussels are classfied as an invasive species in North America and Europe. In Europe they can be found in England, Ireland, Spain, Sweden, Switzerland and The Netherlands. In North America they can be found all throught The Great Lakes Region. 
+                </p>
+            </div>
+
+            <div class="col-sm-6">
+              <img class="gif rounded" src="https://static.igem.wiki/teams/4323/wiki/zebra-spread-video.gif">
+              <p>Image credit to https://nas.er.usgs.gov/queries/SpeciesAnimatedMap.aspx?SpeciesID=5</p>
+            </div>
+        </div>
+
+        <!-- Second Block with the what's new -->
+        <div class="row py-2">
+          <div class="col">
+            <img class=" image-filler rounded" src="https://static.igem.wiki/teams/4323/wiki/mussel-with-feet.png">
+          </div>
+
+            <div class=" col text-center">
+                <h2 class="display-6">What's new?</h2>
+                <p class="lead paragraph-default">
+                    Zebra mussels have been spreading in North America at least since 1986 when they were spotted in Lake Erie. Concerningly, they made their way into lake Winnipeg in 2013. Lake Winnipeg is the largest lake in Manitoba covering 24,514 km<sup>2</sup>, an area larger than the country of Slovenia. 
+                </p>
+            </div>
+
+            
+        </div>
+
+        <!-- Why are they a problem -->
+        <div class="row my-5">
+            <div class=" offset-3 col-sm-6 text-center bg-danger border rounded-circle">
+                <h2 class="display-5" >Why are they a problem?</h2>
+            </div>
+        </div>
+
+        <!-- Ecological Hazard -->
+        <div class="row my-5 py-4">
+          <div class="col">
+            <img class=" image-filler rounded-circle" src="https://static.igem.wiki/teams/4323/wiki/mussel-photos/mussels-close-up.png">
+          </div>
+
+            <div class="col text-center">
+                <h2 class="display-6">Ecological Hazard</h2>
+                <p class="lead paragraph-default align-items-center">
+                    In many of their new enviroments Zebra mussels have no natural predators, this allows them to grow unchecked. The result is a loss of natural biodiversity as they outcompete natural mussels, in fact they go a step further and actually attack them!
+                </p>
+            </div>
+        </div>
+
+        <!-- Infrasructure dammage -->
+        <div class="row py-5">
+            <div class="col text-center">
+                <h2 class="display-6">Infrastructure Damage</h2>
+                <p class="lead paragraph-default">
+                    Zebra mussels are well known fror their ability to cause massive amounts of damage to aquatic Infrasructure.
+                </p>
+            </div>
+
+            <div class="col-6">
+              <img class=" image-filler rounded" src="https://static.igem.wiki/teams/4323/wiki/mussel-photos/zebra-encrusted-propeller.png">
+            </div>
+
+        </div>
+
+        <!-- Reduced enviroment quality -->
+        <div class="row py-5">
+
+          <div class="col">
+            <img class=" image-filler rounded" src="https://static.igem.wiki/teams/4323/wiki/mussel-photos/mussesl-beach.png">
+          </div>
+
+            <div class="col text-center">
+                <h2 class="display-6">Reduce Quality of the  Enviroment for People</h2>
+                <p class="lead paragraph-default">
+                    Zebra mussels grow to such high population densities that when they die they can compleatly cover beaches. In fact, in order to recover these public spaces heavy snow clearing equipment is pressed into service! 
+                </p>
+            </div>
+        </div>
+
+        <!-- Conventional solutions -->
+        <div class="row py-5">
+            <div class=" offset-3 col-sm-6 text-center bg-danger border rounded-circle">
+                <h2 class="display-5" >Conventional Solutions</h2>
+            </div>
+        </div>
+
+        <!-- Conventional solution text -->
+        <div class="row">
+            <div class=" offset-3 col-sm-6 text-center">
+                <p class="lead paragraph-default">
+                    Most efforts at controlling zebra mussels focuss on controlling spread by monitoring boaters. This helps prevent the mussels from spreading to new lakes. However, once the population is established removal depends on larg concentrations of potash or copper based molluscicides. Not only is this expensive and ecologicaly dammaging, it cannot be applied to large bodies of water. 
+                </p>
+            </div>
+        </div>
+
+        <!-- Our solution  -->
+        <div class="row py-5 my-5">
+            <div class=" offset-3 col-sm-6 text-center bg-danger border rounded-circle">
+                <h2 class="display-5" >Our Solution</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" offset-3 col-sm-6 text-center">
+                <p class="lead paragraph-default">
+                    A targeted and green approach with the large scaling potential. For more information go to description.
+                </p>
+            </div>
+        </div>
+    </div> <!-- End of main content-->
+</main>
+
+{% endblock %}

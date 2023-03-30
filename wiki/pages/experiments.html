@@ -1,0 +1,289 @@
+{% extends "layout.html" %}
+  
+{% block title %}Experiments{% endblock %}
+{% block lead %}Describe the research, experiments, and protocols you used in your iGEM project.{% endblock %}
+
+{% block page_content %}
+
+<!-- This part is the big thing on top, in the final do not copy the main tags -->
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Experiments</h1>
+            <p class="lead medium-importance"></p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Molecular Biology (DNA)  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Molecular Biology (DNA)</h5>
+          <hr>
+          
+          <h5 class="display-6 sub-header my-4">BioBrick Assembly</h5>
+         
+
+          <!-- PCR -->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">PCR to generate 5' modification</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">If the vector is a plasmid there will generally be a region where the are multiple cloning sites. The insert does not typically have a cloning site built in unless they are left over from previous cloning. PRC can be used to generate a large amount and insert and add the appropriate cut sites. </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/pcr.pdf" target="_blank"
+              style="color:blueviolet">PCR Protocol</a>
+            </p>
+
+          </div>
+
+          <!-- Restriction Enzyme Digest-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">Resctriction Enzyme Digest</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">Separately incubate both pieces of DNA (vector and insert) with two restriction enzymes. The vector and insert must be designed such that they have matching sticky ends. It is common to deactivate the restriction enzymes by heat denaturation once sufficient time had passed. </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/digestion.pdf" target="_blank"
+              style="color:blueviolet">Restriction Digest</a>
+            </p>
+          </div>
+
+          <!-- Ligation -->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">Ligation</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">Now that both pieces of DNA have matching overhangs it is time to combine them and form the desired recombinant product.</p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/ligation.pdf" target="_blank"
+              style="color:blueviolet">Ligation</a>
+            </p>
+
+          </div>
+
+          <!-- Transformation -->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">Transformation and Selection</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">Hopefully some of the recombinant products made their way into the cells. Antibiotic selction will filter out any cells that don't have a plasmid. Unfortunately, those plasmids could be empty...</p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/transformation.pdf" target="_blank"
+              style="color:blueviolet">Transformation</a>
+            </p>
+          </div>
+
+          <!-- DNA Extraction-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">DNA Extraction "Mini-Prep" and Gel Solubilization</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">The process of isolating DNA from a matrix. In our case it is either an <em>E.coli</em> cell lysate of an agarose gel.</p>
+
+            
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/mini-prep-buffers.pdf" target="_blank"
+              style="color:blueviolet">MiniPrep Buffers</a>
+            </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/mini-prep-kit.pdf" target="_blank"
+              style="color:blueviolet">Mini Prep Protocol from Fisher Scientific</a>
+            </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/agarose-gel.pdf" target="_blank"
+              style="color:blueviolet">Gel Extraction from Invitrogen</a>
+            </p>
+          </div>
+
+          <!-- Gel Electrophoresis-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">Agasore Gel Electrophoresis</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">Agarose Gel Electrophoresis separates out the DNA molecules by size. This protocol was placed at the end of the workflow, but in reality, it can move around a little.  This is a very versatile technique, we used it for the following. </p>
+
+            <p class="offset-1 col-10 my-4">After DNA extraction you perform a small digest and run the result on a gel. This allows you to identify if the colony you extracted the DNA from actually has the desired recombinant product. </p>
+
+            <p class="offset-1 col-10 my-4">After PRC it is common to run the result on an agarose gel. Since the size of the PCR product is known you can see if the PCR reaction was successful. Furthermore, this serves as a method to purify the DNA as they will be separated out by size. Cut out the desired and extract the DNA from the gel. </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/agarose-gel.pdf" target="_blank"
+              style="color:blueviolet">Agarose Gel Electrophoresis</a>
+            </p>
+
+
+          </div>
+
+          <!-- The Here we have the first Gibson Assembly Protocol-->
+          <h5 class="display-6 sub-header my-4">Gibson Assembly</h5>
+          
+          <!-- PCR is just the best right-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">PCR to Linearize Vector and Generate 5' Overhang</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">Gibson assembly relies on sequence complementarity between the peices of DNA being joined. Unless the DNA has been specifically preformatted you will need to add the complementarity to the 5' end by PCR.</p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/pcr.pdf" target="_blank"
+              style="color:blueviolet">PCR - Plymerase Chain Reaction</a>
+            </p>
+          </div>
+
+          <!-- One pot Gibson asssembly-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">"One Pot" Gibson Assembly Reaction</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">The Gibson Reaction is an isothermal method: mix the following reagents, DNA with compatible overhangs, 5'-> 3' exonuclease, DNA polymerae and DNA ligase,  </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/gibson.pdf" target="_blank"
+              style="color:blueviolet">Gibson Assembly Reaction</a>
+            </p>
+          </div>
+
+          
+
+          
+
+        </div>
+      </div>
+
+      <!-- Molecular Biology (Proteins)  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Molecular Biology (Proteins)</h5>
+          <hr>
+          
+          <!-- General Protein Expression-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">General Protein Expression</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">For studying the proteins alone one of the simplest options is the ITPG induced T7 polymerase system.</p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/express-protein.pdf" target="_blank"
+              style="color:blueviolet">Protein Expression using the T7 system</a>
+            </p>
+
+          </div>
+
+          <!-- SDS-PAGE -->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">SDS-PAGE</h5></button>
+          <div class="panel">
+            
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/sds-page-gel-prep.pdf" target="_blank"
+              style="color:blueviolet">Preparing SDS-PAGE Gels</a>
+            </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/sds-page.pdf" target="_blank"
+              style="color:blueviolet">SDS-PAGE Sample Prep and Running</a>
+            </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/technical-docs/sds-unil.pdf" target="_blank"
+              style="color:blueviolet">SDS-PAGE for UNILaussane</a>
+            </p>
+          </div>
+
+          <!-- Protein purification-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">Affinity Chromatography (His-tag)</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">The most common method for protein purification is chromatography. By the use of a variety of stationary phases, proteins can be separated based on their size, hydrophobicity, isoelectric point or based on specific interaction. In our case, we used immobilized metal affinity chromatography (IMAC). Procedures below are for eGFP, but it is more or less the same with all His-tagged proteins.</p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/production-and-purification-protocol.pdf" target="_blank"
+              style="color:blueviolet">General example of IMAC</a>
+            </p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/akta-procedure.pdf" target="_blank"
+              style="color:blueviolet">IMAC on AKTA start</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Verifiaction of Function  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Verification of Function</h5>
+          <hr>
+          
+          <!-- Fluorecent stuff-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">Fluorescence Assays</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">The file below describes the general procedure for both the phospate sensor and the nitrate sensro. The assay perfomed for the lehtbridge high shcool are very simmilar.</p>
+
+            <p class="offset-1 col-10 my-4">
+              <a href="https://static.igem.wiki/teams/4323/wiki/procedures/96-fluo.pdf" target="_blank"
+              style="color:blueviolet">Fluorecent Expression assay, genearl procedure</a>
+            </p>
+
+
+          </div>
+
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">TAKEM4 buffer - Lethbridge High School</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-6 my-4"><b>10X TAKEM4 buffer</b>: 500 mM Tris pH 7.5,700 mM NH4Cl, 300 mM KCl, 10 mM EDTA, 40 mM MgCl<sub>2</sub></p>
+
+            <p class="offset-1 col-6 my-4"></p>
+
+          </div>
+
+          <!-- UNIL-->
+          <button class="accordion rounded my-2"><h5 class="display-6 medium-importance">Bioassays</h5></button>
+          <div class="panel">
+            <p class="offset-1 col-10 my-4">The bioassays were all conducted by UNILausanne, the assay conditions are described below.</p>
+
+            <p class="offset-1 col-10 my-4"><a href="https://static.igem.wiki/teams/4323/wiki/unil-partner-ship/collaboration-with-manitoba.pdf" target="_blank"
+            style="color:blueviolet">Bioassy info found here</a></p>
+
+            
+
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Genbank Files and Full Worflows -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Complete Workflows and GenBank Files</h5>
+          <hr>
+
+          <!-- All of the worklows-->
+          <h5 class="display-6 medium-importance my-4">Complete Workflows</h5>
+          <p class="offset-1 col-10 my-4 sub-header lead"><a href="https://static.igem.wiki/teams/4323/wiki/technical-docs/no3-complete-bba-k216005.pdf" target="_blank" style="color:blueviolet">Nitrate Sensor</a></p>
+          <p class="offset-1 col-10 my-4 sub-header lead"><a href="https://static.igem.wiki/teams/4323/wiki/technical-docs/po4-complete-bba-k1682012.pdf" target="_blank" style="color:blueviolet">Phosphate Sensor</a></p>
+          <p class="offset-1 col-10 my-4 sub-header lead"><a href="https://static.igem.wiki/teams/4323/wiki/technical-docs/o2-bba-k239005.pdf" target="_blank" style="color:blueviolet">Oxygen Sensor</a></p>
+
+          <!-- Genbank stuff-->
+          <h5 class="display-6 medium-importance my-4">Annotated DNA sequences as .gb (sensor and toxins)</h5>
+          <p class="offset-1 col-10 sub-header lead"><a href="https://zenodo.org/record/7138051/files/zebrazap_2022_plasmids.zip?download=1" target="_blank" style="color:blueviolet">Plasmids</a></p>
+          <p class="offset-1 col-10 sub-header lead"><a href="https://zenodo.org/record/7138051/files/zebrazap_2022_primers.zip?download=1" target="_blank" style="color:blueviolet">Primers</a></p>
+
+        </div>
+      </div>
+
+
+</main>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+  
+{% block title %}Notebook{% endblock %}
+{% block lead %}Document the dates you worked on your project. This should be a detailed account of the work done each day for your project.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Note Book</h1>
+            <p class="lead medium-importance"></p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- May  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance"> April - May (Planing, Brainstorming)</h5>
+          <hr>
+          <p class="offset-1 col-10"> - Brainstorming & Research</p>
+          <p class="offset-1 col-10"> - Met with Brendin Spearing (Boat inspector with Aquatic Invasive Species)</p>
+          <p class="offset-1 col-10"> - Met with Candace Parks (Aquativ Invasive species expert)</p>
+          <p class="offset-1 col-10">- Design and order DNA for sensors</p>
+          <p class="offset-1 col-10">- Begin <em>in sillico</em> work for toxic proteins</p>
+        </div>
+      </div>
+
+      <!-- (June ): Preparation of plasmid inventory -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">June (Cloning)</h5>
+          <hr>
+          
+          <p class="offset-1 col-8">(Week 1) Insert of EGFP with BamHI and HindIII cut sites are isolated. Plasmid database/inventory is created.</p>
+
+          <p class="offset-1 col-8">(Week 2) Synthesized constructs are confirmed with the correct size and entered into the plasmid inventory. Initial cloning experiments yield few colonies, but isolated products do not have the correct fragment size.</p>
+
+          <p class="offset-1 col-8">(Week 3) Cloning experiments yield few colonies, and most isolated products do not  have the correct fragment size. One experiment gave a product with the T7 promoter with correct size fragments after digestion.</p>
+
+          <p class="offset-1 col-8">(Week 4) Cloning protocols are not reproducible as further attempts to clone yield no colony. Time to try a different assembly strategy.</p>
+  
+        </div>
+      </div>
+
+      <!-- (July): Preparation of plasmid inventory -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">July (Still Cloning)</h5>
+          <hr>
+          <p class="offset-1 col-8">(Week 1) Successful cloning of EGFP into T7 promoter construct (pUCIDT plasmid). Obtain digested pSB1C3 backbone for further cloning purposes.</p>
+          <p class="offset-1 col-8">(Week 2) Expression of EGFP using T7_EGFP in pUCIDT with IPTG as inducer. Detection of expression using SDS-PAGE and fluorescent spectroscopy.</p>
+          <p class="offset-1 col-8">(Week 3) T7_EGFP construct is successfully cloned into pSB1C3 backbone. PCR gives a poor quantity of inserts and backbone due to non-specific binding. Both LB and M9 media are suitable for EGFP expression with LB being slightly better (higher fluorescent/OD600). M9/Tris medium is not suitable for growing cells as OD<sub>600</sub>of cells is very low in comparison the to other two media.</p>
+          <p class="offset-1 col-8">(Week 4) Key outcomes: Gel extraction gives very low-quality and low-yield DNA products for cloning purposes. Expression of EGFP is detected in nitrate and phosphate sensing cells. Response curves in response to concentrations of nitrate (0 - 500 &mu;M) and phosphate (0 – 500 &mu;M) are constructed. No expression is detected in pSB1C3_T7_EGFP.</p>
+
+          <p class="offset-1 col-8">FitD sequence and aerolysin sequence are finalized and ordered.</p>
+  
+        </div>
+      </div>
+
+      <!--  August -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">August (Chracterize Sensors + More Trouble shooting & Cloning)</h5>
+          <hr>
+  
+          <p class="offset-1 col-10">Optimization is still required for cloning experiments. By the end of the week, good quality gel extracted DNA samples of nitrate-sensor-EGFP insert, phosphate-sensor-EGFP insert, and pSB1C3 backbone are obtained for setting up the ligation reaction. Expression of EGFP in response to phosphate and nitrate concentration is reproduced and thus, further proves that the designed construct works!</p>
+
+          <p class="offset-1 col-10">DNA fragments required for Gibson Assembly are obtained by using new primers. Nitrate sensor_EGFP and phosphate sensor_EGFP are successfully cloned into pSB1C3. Expression results are reproducible.</p>
+
+          <p class="offset-1 col-10">T7_EGFP is successfully cloned into pET28b. Toxin-containing plasmids are documented and prepared for expression. No EGFP expression is detected for nitrate and phosphate sensing bacteria with pSB1C3 backbone.</p>
+
+          <p class="offset-1 col-10"> Nitrate sensor_EGFP is successfully cloned into pET28b backbone the quality of DNA samples for cloning is poor. No expression of EGFP is detected for pH and oxygen sensors. </p>
+
+
+          
+  
+        </div>
+      </div>
+
+      <!--  September -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">September (Toxins & Protein Work)</h5>
+          <hr>
+  
+          <p class="offset-1 col-10">T7_Act is successfully cloned in a pET28b  backbone. No expression of EGFP is detected for pH and oxygen sensors. It is unclear whether EGFP is expressed using a nitrate sensor in pET28b backbone.</p>
+
+          <p class="offset-1 col-10">T7_FitD is successfully cloned into pET28b backbone. EGFP expression is best for nitrate sensors in pUCIDT (very high copy number). Some expression is observed in pET28b  (low copy number) and negligible expression is observed in pSB1C3 (high copy number).</p>
+
+          <p class="offset-1 col-10">Detection of FitD by SDS-PAGE analysis proves difficult. Aerolysin purified by IMAC chromatograph</p>
+
+          <p class="offset-1 col-10">Toxicity assays completed by UNILausanne</p>
+
+          <p class="offset-1 col-10">Finished RNA aptamers assay for Lethbridge High School</p>
+  
+
+          
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}

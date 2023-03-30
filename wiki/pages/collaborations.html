@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+  
+{% block title %}Collaborations{% endblock %}
+{% block lead %}Sharing and collaboration are core values of iGEM. We encourage you to reach out and work with other teams on difficult problems that you can more easily solve together.{% endblock %}
+
+{% block page_content %}
+
+<main>
+    <!-- Title image -->
+    <section class="py-2 text-center container-fluid bg-danger" style="background-image: url(https://static.igem.wiki/teams/4323/wiki/umanitobazebra.jpg);" >
+        <div class="row my-5 pt-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="display-1 pt-1">Collaboration</h1>
+            <p class="lead medium-importance"></p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Introduction  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Introduction</h5>
+          <hr>
+          <p class="offset-1 col-10">The Lethbridge High School team is developing a multifunctional mRNA construct to treat type 1 diabetes in project Dia-Beatable. They are developing self-amplifying and self-regulating sa-mRNA molecules to control insulin production.  Through this project, the team aims to provide a novel and effective treatment for type 1 diabetes patients.</p>
+
+          <p class="offset-1 col-10">The UManitoba team is helping the Lethbridge High School team to test and validate the glucose sensitivity of the mRNA construct. To achieve glucose sensitivity, a riboswitch that can bind to glucose is incorporated into the mRNA. Upon binding to glucose, this riboswitch can adopt a suitable conformation to regulate the mRNA construct and trigger insulin expression. </p>
+
+          <p class="offset-1 col-10">Riboswitches can be tested by fusing them with fluorogenic aptamer, which can then adopt a suitable conformation to bind to a pro-fluorescent dye. A complex of pro-fluorescent dye and fluorogenic aptamer can fluoresce and thus, enable qualification. Hence, a fusing construct is created by fusing glucose-sensing riboswitch with RNA Mango, a fluorogenic aptamer. Upon binding to glucose, the riboswitch can trigger RNA Mango to adopt a suitable conformation to bind to a pro-fluorescent dye called TOI,  which enables detection using fluorescent spectroscopy. </p>
+
+          <p class="offset-1 col-10">The Lethbridge High School team sent their glucose sensing aptamers construct and TOI dye to the UManitoba team. The UManitoba team prepared TAKEM4 buffer, glucose solution, and nuclease-free water for the experiment. The UManitoba team then performed five experiments designed by the Lethbridge High School team, three of which are reported below. </p>
+        </div>
+      </div>
+
+      <!-- TOI Background Fluorescence-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">TOI Background Fluorescence</h5>
+          <hr>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-7 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/lethbridge-hs/fluorescent-of-toi-in-buffer-no-rna-sensor.jpg">
+              <p class="offset-2 col-7 mt-1 mb-5">Figure 1. Fluorescent of TOI dye in absence of RNA biosensor and increasing glucose concentration. Samples are mixed and transferred to a quartz cuvette for fluorescent measurement. Measurements are done using &gamma; Excited = 510 nm and &gamma; Emission = 520 – 600 nm.</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <!-- Glucose Sensitivity of Scramble Aptamer-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Glucose Sensitivity of Scramble Aptamer</h5>
+          <hr>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-7 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/lethbridge-hs/glucose-sensitivity-of-scramble-aptamer.jpg">
+              <p class="offset-2 col-7 mt-1 mb-5">Figure 2. Glucose sensitivity of scramble aptamer. Samples are mixed and transferred to a quartz cuvette for fluorescent measurement. Measurements are done using &gamma; Excited = 510 nm and &gamma; Emission = 520 – 600 nm.</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <!-- Glucose sensitivity of glucose aptamer-->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Glucose Sensitivity of Glucose Aptamer</h5>
+          <hr>
+
+          <div class="row pt-3">
+            <div class="col">
+              <img  class="offset-2 col-6 img-thumbnail" src="https://static.igem.wiki/teams/4323/wiki/lethbridge-hs/glucose-sensitivity-of-glucose-aptamer.jpg">
+              <p class="offset-2 col-6 mt-1 mb-5">Figure 3. Glucose sensitivity of glucose aptamer. Samples are mixed and transferred to a quartz cuvette for fluorescent measurement. Measurements are done using &gamma; Excited = 510 nm and &gamma; Emission = 520 – 600 nm.</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <!-- Contribution to Lethbridege HI  -->
+      <div class="row mx-auto col-sm-10 border border-dark rounded bg-light shadow mt-5 mb-5">
+        <div class="col mt-2">
+          <h5 class="display-6 medium-importance">Contribution to Lethbridge_HS</h5>
+          <hr>
+          <p class="offset-1 col-10">Confirmation: the presence of glucose leads to an increase in fluorescence, the intended function of the aptamers.</p>
+
+          <p class="offset-1 col-10">Novel Observation: Incubating the sample for a longer period of time with glucose leads to higher fluorescence. The results shared with Lethbridge, they will draw the final conclusion. In our opinion it takes about 5 min to reach the equilibrium conditons.</p>
+
+          <p class="offset-1 col-10">For more infromation on the UManitoba Lethbridge_HS collaboration
+            <a href="https://2022.igem.wiki/lethbridge-hs/results.html" target="_blank" style="color:blueviolet">click here</a>.
+
+
+        </div>
+      </div>
+
+</main>
+
+{% endblock %}
